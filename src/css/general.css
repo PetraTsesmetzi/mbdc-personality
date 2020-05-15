@@ -1,7 +1,7 @@
 /* --- GENERAL --- */
 :root {
-  --vw: 100%;
-  --vh: 100%;
+  --vw: 100vh;
+  --vh: 100vw;
 
   /* --- FONTCOLORS --- */
   --mainFontColor: #fff;

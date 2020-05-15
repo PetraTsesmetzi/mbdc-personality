@@ -1,4 +1,4 @@
-import "./../../css/nav.css";
+/* import "./../../css/nav.css"; */
 
 /* shwows and hide the complete navbar if you scroll */
 export class Navbar {

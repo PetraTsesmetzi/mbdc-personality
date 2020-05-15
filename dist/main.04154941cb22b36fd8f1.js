@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 5);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -110,6 +110,12 @@
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// extracted by mini-css-extract-plugin
+
+/***/ }),
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -203,14 +209,19 @@ var router_Router = /*#__PURE__*/function () {
 }();
 
 
-// CONCATENATED MODULE: ./src/js/Components/default.js
+// EXTERNAL MODULE: ./src/css/home.css
+var home = __webpack_require__(0);
+
+// CONCATENATED MODULE: ./src/img/banner_index.png
+/* harmony default export */ var banner_index = (__webpack_require__.p + "imgs/banner_indexc8ce1858b358e292efa9daa3d0dc4b9e.png");
+// CONCATENATED MODULE: ./src/js/Components/homebanner.js
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-function default_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function homebanner_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-function default_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function homebanner_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
 
-function default_createClass(Constructor, protoProps, staticProps) { if (protoProps) default_defineProperties(Constructor.prototype, protoProps); if (staticProps) default_defineProperties(Constructor, staticProps); return Constructor; }
+function homebanner_createClass(Constructor, protoProps, staticProps) { if (protoProps) homebanner_defineProperties(Constructor.prototype, protoProps); if (staticProps) homebanner_defineProperties(Constructor, staticProps); return Constructor; }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
@@ -232,18 +243,20 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
-var DefaultComponent = /*#__PURE__*/function (_HTMLElement) {
-  _inherits(DefaultComponent, _HTMLElement);
 
-  var _super = _createSuper(DefaultComponent);
 
-  function DefaultComponent() {
-    default_classCallCheck(this, DefaultComponent);
+var homebanner_Homebanner = /*#__PURE__*/function (_HTMLElement) {
+  _inherits(Homebanner, _HTMLElement);
 
-    return _super.apply(this, arguments);
+  var _super = _createSuper(Homebanner);
+
+  function Homebanner() {
+    homebanner_classCallCheck(this, Homebanner);
+
+    return _super.call(this);
   }
 
-  default_createClass(DefaultComponent, [{
+  homebanner_createClass(Homebanner, [{
     key: "connectedCallback",
     value: function connectedCallback() {
       this.render();
@@ -251,13 +264,52 @@ var DefaultComponent = /*#__PURE__*/function (_HTMLElement) {
   }, {
     key: "render",
     value: function render() {
-      this.innerHTML = "<div style=\"height:100px; background-color:gold\">\n          <span>I am the home</span>\n          </div>";
+      this.innerHTML = "<div id=\"home_banner\">\n        <div id=\"home_banner_desc\">\n          <h1>WHO AM I?</h1>\n          <h2>\n            Take our Personality Test and get a \u201Cfreakishly accurate\u201D\n            <br />\n            description of who you are and why you do things the way\n            you do.\n          </h2>\n          <a\n            href=\"view/personality_test/personalitytest.html\"\n            class=\"button\"\n            >Take the Test</a\n          >\n        </div>\n      </div>\n      <div id=\"home_banner_img\">\n        <img src=\"".concat(banner_index, "\" alt=\"banner_index\" />\n      </div>");
     }
   }]);
 
-  return DefaultComponent;
+  return Homebanner;
 }( /*#__PURE__*/_wrapNativeSuper(HTMLElement));
-customElements.define("default-component", DefaultComponent);
+customElements.define("homebanner-component", homebanner_Homebanner);
+// CONCATENATED MODULE: ./src/js/Components/default.js
+function default_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function default_defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function default_createClass(Constructor, protoProps, staticProps) { if (protoProps) default_defineProperties(Constructor.prototype, protoProps); if (staticProps) default_defineProperties(Constructor, staticProps); return Constructor; }
+
+
+var default_DefaultComponent = /*#__PURE__*/function () {
+  function DefaultComponent() {
+    default_classCallCheck(this, DefaultComponent);
+
+    var content = document.getElementById("content");
+    var section = document.createElement("section");
+    section.setAttribute("id", "home_banner_container");
+    content.appendChild(section);
+    this.render(section);
+  }
+
+  default_createClass(DefaultComponent, [{
+    key: "render",
+    value: function render(section) {
+      var banner = new homebanner_Homebanner();
+      section.appendChild(banner);
+    }
+    /* connectedCallback() {
+      this.render();
+    }
+     render() {
+      this.innerHTML = `<div style="height:100px; background-color:gold">
+            <span>I am the home</span>
+            </div>`;
+    } */
+
+  }]);
+
+  return DefaultComponent;
+}();
+/* customElements.define("default-component", DefaultComponent); */
 // CONCATENATED MODULE: ./src/js/Common/store.js
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
 
@@ -702,14 +754,17 @@ customElements.define("kendal-component", kendal_KendalComponent);
 
 
 var routes = {
-  home: DefaultComponent,
+  home: default_DefaultComponent,
   personalitytype: Personalities,
   personalitytest: Personalitytest,
   contact: Contact,
-  "": DefaultComponent,
+  "": default_DefaultComponent,
   pagenotfound: Pagenotfound,
   kendal: kendal_KendalComponent
 };
+// EXTERNAL MODULE: ./src/css/nav.css
+var css_nav = __webpack_require__(1);
+
 // CONCATENATED MODULE: ./src/js/Components/listItem.js
 function listItem_typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { listItem_typeof = function _typeof(obj) { return typeof obj; }; } else { listItem_typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return listItem_typeof(obj); }
 
@@ -788,7 +843,7 @@ var listItem_ListItem = /*#__PURE__*/function (_HTMLElement) {
 }( /*#__PURE__*/listItem_wrapNativeSuper(HTMLElement));
 customElements.define("list-item", listItem_ListItem);
 // EXTERNAL MODULE: ./src/css/burger.css
-var burger = __webpack_require__(0);
+var burger = __webpack_require__(2);
 
 // CONCATENATED MODULE: ./src/js/Components/burger.js
 function burger_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -840,6 +895,7 @@ function navlinks_createClass(Constructor, protoProps, staticProps) { if (protoP
 
 
 
+
 var navlinks_NavLinks = /*#__PURE__*/function () {
   function NavLinks(config) {
     navlinks_classCallCheck(this, NavLinks);
@@ -870,9 +926,6 @@ var navlinks_NavLinks = /*#__PURE__*/function () {
 
   return NavLinks;
 }();
-// EXTERNAL MODULE: ./src/css/nav.css
-var css_nav = __webpack_require__(1);
-
 // CONCATENATED MODULE: ./src/js/Components/navbar.js
 function navbar_classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -880,9 +933,9 @@ function navbar_defineProperties(target, props) { for (var i = 0; i < props.leng
 
 function navbar_createClass(Constructor, protoProps, staticProps) { if (protoProps) navbar_defineProperties(Constructor.prototype, protoProps); if (staticProps) navbar_defineProperties(Constructor, staticProps); return Constructor; }
 
+/* import "./../../css/nav.css"; */
 
 /* shwows and hide the complete navbar if you scroll */
-
 var Navbar = /*#__PURE__*/function () {
   function Navbar() {
     navbar_classCallCheck(this, Navbar);
@@ -936,10 +989,10 @@ var Routing_Index = function Index() {
 
 
 // EXTERNAL MODULE: ./src/css/general.css
-var general = __webpack_require__(2);
+var general = __webpack_require__(3);
 
 // EXTERNAL MODULE: ./src/css/footer.css
-var footer = __webpack_require__(3);
+var footer = __webpack_require__(4);
 
 // CONCATENATED MODULE: ./src/app.js
 /* import NavBar from "./js/Navigation/NavBar"; */

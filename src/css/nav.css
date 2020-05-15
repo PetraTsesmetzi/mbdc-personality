@@ -96,7 +96,11 @@ list-item {
     z-index: 1100;
     margin: 0;
   }
-
+  list-item {
+    height: inherit;
+    width: auto;
+    border: none;
+  }
   #nav_links li {
     height: inherit;
     width: auto;
@@ -104,7 +108,7 @@ list-item {
     border: none;
   }
   #nav_links li:last-child {
-    margin: 0 5%;
+    margin: 0;
   }
   #nav_links li:hover {
     height: inherit;
