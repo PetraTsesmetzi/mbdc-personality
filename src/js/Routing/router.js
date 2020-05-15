@@ -33,9 +33,8 @@ export default class Router {
       if (!back) {
         history.pushState({ page }, null, `/${page}`);
       }
-      setTimeout(() => {
-        this.routerOutlet.appendChild(new this.routes[state.route.path]());
-      }, 500);
+
+      this.routerOutlet.appendChild(new this.routes[state.route.path]());
     }
   }
 }
