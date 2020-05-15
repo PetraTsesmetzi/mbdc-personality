@@ -7,8 +7,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "start": "node server.js"
   },
   "author": "pitschi",
   "license": "ISC",
