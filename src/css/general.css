@@ -1,0 +1,82 @@
+/* --- GENERAL --- */
+:root {
+  --vw: 100%;
+  --vh: 100%;
+
+  /* --- FONTCOLORS --- */
+  --mainFontColor: #fff;
+  --secondFontColor: #151515;
+  --thirdFontColor: #4caf50;
+  --fourthFontColor: #9b9c9b;
+
+  /* --- BACKGROUNDCOLORS --- */
+  --mainBgColor: #151515;
+  --secondBgColor: #fff;
+  --thirdBgColor: #4caf50;
+  --fourthBgColor: #b3b3b3;
+
+  /* --- NAV/FOOTER --- */
+  --headerNavColor: #22262a;
+  --headerHeight_S: 3rem;
+  --headerHeight_M: 4rem;
+  --headerHeight_L: 6rem;
+  --headerHeight_XL: 8rem;
+  --footerHeight_M: 340px;
+  --footerHeight_L: 420px;
+  --footerHeight_XL: 500px;
+  --links: 6;
+
+  /* --- BORDERCOLORS --- */
+  --borderColor: #32373d;
+
+  /* --- GENERALBUTTONCOLORS --- */
+  --buttonColor: #4caf50;
+  --btnHoverColor: #67b669;
+  --btnDisableColor: #b3b3b3;
+
+  /* --- INDEX ---*/
+  --jumboImgHeight_S: 140px;
+  --jumboImgHeight_M: 220px;
+  --jumboImgHeight_L: 270px;
+  --jumboImgHeight_XL: 370px;
+
+  /* --- OVERVIEW ---*/
+  --slideColor: #4caf50;
+
+  /* --- PERSONALITY ---*/
+  /* ---nothing extra */
+
+  /* --- TEST --- */
+  --progressSectionColor: #151515;
+  --progressColor: #fff;
+  --progressBarColor: #4caf50;
+  --progressNumberColor: #fff;
+  --secondProgressSectionColor: #e0e2e2;
+  --secondProgressColor: #989999;
+  --secondProgressNumberColor: #a5a6a8;
+  --secondButtonColor: #5f394d;
+  --btnWarningColor: darkred;
+  --btnWarningBgColor: rgb(247, 215, 215);
+
+  /* --- TESTRESULT --- */
+  --testResultColor: #f0ecec;
+
+  /* --- CONTACT --- */
+  --contactError: #dc143c;
+  --contactBgSuccess: #965d5d;
+  --contactFontSuccess: #c7a3a3;
+
+  --shadowColor: rgb(235, 232, 232);
+}
+.resize_animation_stopper * {
+  animation: none !important;
+  transition: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", "Lato", "Helvetica Neue", "Arial", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}

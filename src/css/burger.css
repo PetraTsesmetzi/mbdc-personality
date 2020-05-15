@@ -1,0 +1,37 @@
+.burger {
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: space-between;
+  margin-right: 1rem;
+}
+.burger .line {
+  width: 20px;
+  height: 3px;
+  background-color: var(--secondBgColor);
+  transition: all cubic-bezier(0.26, 0.1, 0.27, 1.55) 0.35s;
+}
+.burger.close .top {
+  transform: rotate(-45deg) translate(-5px, 3px);
+}
+.burger.close .middle {
+  opacity: 0;
+}
+.burger.close .bottom {
+  transform: rotate(45deg) translate(-6px, -5px);
+}
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  .burger {
+    display: none;
+  }
+}
+/* @media only screen and (min-width: 568px) and (orientation: landscape) {
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+} */
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  .burger {
+    display: none;
+  }
+}
