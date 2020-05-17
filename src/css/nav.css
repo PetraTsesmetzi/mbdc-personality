@@ -93,7 +93,6 @@ list-item {
     transition: none;
     z-index: 1100;
     margin-right: 2rem;
-    border: 2px solid crimson;
   }
   list-item {
     height: inherit;
