@@ -1,5 +1,5 @@
+//actions
 export function loadRoute(route) {
-  console.log(route);
   return {
     type: "CHANGE_ROUTE",
     route,

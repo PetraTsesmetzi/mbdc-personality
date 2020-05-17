@@ -19,11 +19,8 @@
   --headerNavColor: #22262a;
   --headerHeight_S: 3rem;
   --headerHeight_M: 4rem;
-  --headerHeight_L: 6rem;
-  --headerHeight_XL: 8rem;
-  --footerHeight_M: 340px;
-  --footerHeight_L: 420px;
-  --footerHeight_XL: 500px;
+  --footerHeight_S: 200px;
+
   --links: 6;
 
   /* --- BORDERCOLORS --- */
@@ -34,11 +31,10 @@
   --btnHoverColor: #67b669;
   --btnDisableColor: #b3b3b3;
 
-  /* --- INDEX ---*/
+  /* --- HOME ---*/
   --jumboImgHeight_S: 140px;
-  --jumboImgHeight_M: 220px;
-  --jumboImgHeight_L: 270px;
-  --jumboImgHeight_XL: 370px;
+  --jumboImgHeight_M: 190px;
+  --jumboImgHeight_L: 240px;
 
   /* --- OVERVIEW ---*/
   --slideColor: #4caf50;

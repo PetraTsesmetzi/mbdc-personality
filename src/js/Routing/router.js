@@ -1,3 +1,4 @@
+//Router.js
 import { loadRoute } from "./actions";
 
 export default class Router {
@@ -21,6 +22,7 @@ export default class Router {
   }
 
   render(previousState, state) {
+    console.log(state.route);
     let includesPath = Object.keys(this.routes).includes(state.route.path);
     if (!includesPath) state.route.path = "pagenotfound";
 

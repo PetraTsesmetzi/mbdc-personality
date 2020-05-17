@@ -1,3 +1,4 @@
+//routes
 import { DefaultComponent } from "../Components/default";
 import { Personalities } from "../Components/personalities";
 import { Personalitytest } from "../Components/personalitytest";
@@ -10,7 +11,7 @@ export const routes = {
   personalitytype: Personalities,
   personalitytest: Personalitytest,
   contact: Contact,
-  "": DefaultComponent,
+
   pagenotfound: Pagenotfound,
   kendal: KendalComponent,
 };

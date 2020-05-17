@@ -24,6 +24,7 @@ Store.prototype.dispatch = function (action) {
     kendal: kendalCount(this.state.kendal, action),
   };
 
+  let count = 0;
   subscribers.forEach((subscriber) => {
     subscriber(this.previousState, this.state);
   });

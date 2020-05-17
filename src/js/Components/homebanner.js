@@ -13,7 +13,7 @@ export class Homebanner extends HTMLElement {
         <div id="home_banner_desc">
           <h1>WHO AM I?</h1>
           <h2>
-            Take our Personality Test and get a “freakishly accurate”
+            Take our Personality Test and get a “freakishly&nbsp;accurate”
             <br />
             description of who you are and why you do things the way
             you do.

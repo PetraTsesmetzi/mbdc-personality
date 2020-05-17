@@ -1,5 +1,3 @@
-/* --- NAV/MENU --- */
-/* --- < 576px --- */
 #navigation_container {
   width: 100%;
   position: fixed;
@@ -32,7 +30,7 @@ body.hide #navigation_container {
 }
 
 #nav_links {
-  width: var(--vw);
+  width: 100vw;
   height: calc(100vh - var(--headerHeight_S));
   display: flex;
   flex-direction: column;
@@ -61,6 +59,7 @@ list-item {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-transform: capitalize;
 }
 #nav_links li:first-child {
   border-top: none;
@@ -76,124 +75,25 @@ list-item {
   text-decoration: none;
   font-size: 1.2rem;
 }
-/* @media only screen and (min-width: 568px) and (orientation: portrait) {} */
-/* @media only screen and (min-width: 768px) and (orientation: portrait) {} */
-@media only screen and (min-width: 992px) and (orientation: portrait) {
-  /* --- NAV --- */
-  #navigation_content {
-    height: var(--headerHeight_M);
-    justify-content: space-between;
-  }
-  #nav_links {
-    width: 60%;
-    height: var(--headerHeight_M);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-right: 2rem;
-    position: relative;
-    top: 0px;
-    z-index: 1100;
-    margin: 0;
-  }
-  list-item {
-    height: inherit;
-    width: auto;
-    border: none;
-  }
-  #nav_links li {
-    height: inherit;
-    width: auto;
-    padding: 0 0.5rem;
-    border: none;
-  }
-  #nav_links li:last-child {
-    margin: 0;
-  }
-  #nav_links li:hover {
-    height: inherit;
-  }
-  #nav_links a {
-    font-size: 1rem;
-  }
-}
-@media only screen and (min-width: 1200px) and (orientation: portrait) {
-  #nav_links {
-    width: 55%;
-    margin-right: 2rem;
-  }
 
-  #nav_links li {
-    padding: 0 0.7rem;
-  }
-  #nav_links li:hover {
-    height: inherit;
-  }
-
-  #nav_links li:last-child {
-    margin: 0 5%;
-  }
-  #nav_links a {
-    font-size: 1.1rem;
-  }
-}
-@media only screen and (min-width: 1600px) and (orientation: portrait) {
-  /* --- NAV --- */
-  #navigation_content {
-    height: var(--headerHeight_L);
-  }
-  #logo {
-    margin-left: 3rem;
-    font-size: 2rem;
-  }
-  #nav_links {
-    height: var(--headerHeight_L);
-    width: 55%;
-    margin-right: 2rem;
-  }
-
-  #nav_links li {
-    padding: 0 0.7rem;
-  }
-  #nav_links li:last-child {
-    margin-right: 0rem;
-  }
-  #nav_links a {
-    font-size: 1.3rem;
-  }
-}
-@media only screen and (min-width: 1900px) and (orientation: portrait) {
-  /* --- NAV --- */
-  #logo {
-    font-size: 2.4rem;
-  }
-  #nav_links a {
-    font-size: 1.5rem;
-  }
-}
-/* @media only screen and (min-width: 568px) and (orientation: landscape) {
-}
-@media only screen and (min-width: 768px) and (orientation: landscape) {
-} */
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  /* --- NAV --- */
+@media only screen and (min-width: 992px) {
   #navigation_content {
     height: var(--headerHeight_M);
     justify-content: space-between;
   }
 
   #nav_links {
-    width: 60%;
+    width: 600px;
     height: var(--headerHeight_M);
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin-right: 2rem;
     position: relative;
     top: 0;
     transition: none;
     z-index: 1100;
-    margin: 0;
+    margin-right: 2rem;
+    border: 2px solid crimson;
   }
   list-item {
     height: inherit;
@@ -202,9 +102,9 @@ list-item {
   }
   #nav_links li {
     height: 100%;
-    width: 100%;
+    width: auto;
     border: none;
-    padding: 5px;
+    padding: 0 1rem;
   }
   #nav_links li:last-child {
     margin: 0;
@@ -214,55 +114,5 @@ list-item {
   }
   #nav_links a {
     font-size: 1rem;
-  }
-}
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
-  #nav_links {
-    width: 55%;
-    margin-right: 2rem;
-  }
-
-  #nav_links li {
-    padding: 0 0.7rem;
-  }
-  #nav_links li:last-child {
-    margin: 0 5%;
-  }
-  #nav_links a {
-    font-size: 1.1rem;
-  }
-}
-@media only screen and (min-width: 1600px) and (orientation: landscape) {
-  /* --- NAV --- */
-  #navigation_content {
-    height: var(--headerHeight_L);
-  }
-  #logo {
-    margin-left: 3rem;
-    font-size: 2rem;
-  }
-  #nav_links {
-    height: var(--headerHeight_L);
-    width: 55%;
-    margin-right: 2rem;
-  }
-
-  #nav_links li {
-    padding: 0 0.7rem;
-  }
-  #nav_links li:last-child {
-    margin-right: 0rem;
-  }
-  #nav_links a {
-    font-size: 1.3rem;
-  }
-}
-@media only screen and (min-width: 1900px) and (orientation: landscape) {
-  /* --- NAV --- */
-  #logo {
-    font-size: 2.4rem;
-  }
-  #nav_links a {
-    font-size: 1.5rem;
   }
 }
