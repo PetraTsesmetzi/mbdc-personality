@@ -1,0 +1,715 @@
+/* ---Banner --- */
+#personalities_banner_container {
+  width: 100%;
+  height: var(--vh);
+  background-color: var(--mainBgColor);
+  position: relative;
+}
+
+#personalities_banner {
+  width: 100%;
+  height: inherit;
+  background-color: var(--mainBgColor);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#personalities_banner_img {
+  width: 100%;
+  height: calc(var(--vh) - var(--headerHeight_S));
+  position: absolute;
+  top: 0;
+  background-image: url(./../img/banner_overview.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s 1 forwards;
+}
+#personalities_banner_img::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#personalities_banner_desc {
+  position: relative;
+}
+
+#personalities_banner_desc > h1 {
+  color: var(--mainFontColor);
+  font-weight: bold;
+  font-size: 2.4rem;
+  text-align: center;
+}
+#personalities_banner_desc > h2 {
+  color: var(--mainFontColor);
+  font-size: 1.2rem;
+  margin: 0.75em auto;
+  text-align: center;
+}
+
+/*--- PERSONALITIES/GALERIE ---*/
+#personalities_content {
+  width: 100%;
+  height: auto;
+  margin: var(--headerHeight_S) auto 0 auto;
+}
+#personalities_header {
+  width: 90%;
+  margin: 0 auto;
+}
+
+#personalities_header h1 {
+  color: var(--secondFontColor);
+  font-weight: bold;
+  margin: 2rem 0.4rem;
+  font-size: 1.3rem;
+}
+
+#personalities_gallery {
+  width: 100%;
+  position: relative;
+  margin: 0 auto 2rem auto;
+  height: auto;
+}
+#gallery_wrapper {
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#gallery_wrapper a {
+  display: block;
+  width: 50%;
+  position: relative;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.personalities_card {
+  margin: 0.4rem;
+  height: 270px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.personalities_card:hover .card_desc_slide::before {
+  height: 100%;
+}
+.card_desc_slide::before {
+  content: " ";
+  width: 100%;
+  height: 5%;
+  display: block;
+  position: absolute;
+  transition: height 0.2s ease-in-out;
+  background-color: var(--slideColor);
+  z-index: 20;
+}
+
+.card_desc_slide {
+  width: 100%;
+  height: 130px;
+  position: relative;
+  top: 0%;
+  background-color: var(--secondBgColor);
+  z-index: 10;
+}
+.img_wrapper {
+  height: 140px;
+  overflow: hidden;
+}
+
+.img_wrapper img {
+  transition: transform 0.7s ease-in-out;
+  object-fit: cover;
+  width: 100%;
+}
+.personalities_card:hover img {
+  transform: scale(1.2);
+}
+.card_text {
+  position: relative;
+  color: var(--secondFontColor);
+  top: 20%;
+  left: 8%;
+  z-index: 30;
+}
+.card_text > h2 {
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.card_text > p {
+  margin: 2rem 0;
+  text-align: left;
+}
+.personalities_card:hover .card_text {
+  color: var(--mainFontColor);
+}
+
+@media only screen and (min-width: 568px) and (orientation: portrait) {
+  #personalities_header h1 {
+    font-size: 1.3rem;
+  }
+  #gallery_wrapper a {
+    width: 33.3%;
+  }
+  .personalities_card {
+    margin: 0.4rem;
+    height: 320px;
+  }
+  .personalities_card:hover .card_desc_slide::before {
+    height: 160px;
+  }
+
+  .card_desc_slide {
+    height: 160px;
+  }
+  .img_wrapper {
+    height: 160px;
+  }
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #personalities_banner_container {
+    height: 300px;
+  }
+  #personalities_banner {
+    height: 300px;
+  }
+
+  #personalities_banner_img {
+    height: 250px;
+  }
+  #personalities_banner_desc > h1 {
+    font-size: 2.2rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.2rem;
+  }
+  #personalities_header h1 {
+    font-size: 1.4rem;
+    margin: 1.2rem 0.5rem;
+  }
+  #gallery_wrapper a {
+    width: 25%;
+  }
+
+  .personalities_card {
+    margin: 0.4rem;
+    height: 350px;
+  }
+  .personalities_card:hover .card_desc_slide::before {
+    height: 100%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  #personalities_banner_container {
+    height: 370px;
+  }
+
+  #personalities_banner {
+    height: 370px;
+  }
+  #personalities_banner_img {
+    height: 320px;
+  }
+  #personalities_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.2rem;
+  }
+  #personalities_content {
+    margin: calc(var(--headerHeight_M)) auto 0 auto;
+  }
+  #personalities_header h1 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0.5rem;
+  }
+  #gallery_wrapper a {
+    width: 25%;
+  }
+
+  .personalities_card {
+    margin: 0.4rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  #personalities_banner_desc > h1 {
+    font-size: 2.8rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.4rem;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 1.7rem;
+    margin: 1.4rem 0.5rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 20%;
+  }
+  .personalities_card {
+    margin: 0.7rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1600px) and (orientation: portrait) {
+  #personalities_banner_container {
+    height: 450px;
+  }
+
+  #personalities_banner {
+    height: 450px;
+  }
+  #personalities_banner_img {
+    height: 400px;
+  }
+  #personalities_banner_desc > h1 {
+    font-size: 3.2rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.8rem;
+  }
+  #personalities_content {
+    margin: calc(var(--headerHeight_L)) auto 0 auto;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 1.8rem;
+    margin: 1.6rem 0.6rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 20%;
+  }
+  .personalities_card {
+    margin: 0.7rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1900px) and (orientation: portrait) {
+  #personalities_banner_desc > h1 {
+    font-size: 4.5rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 2.4rem;
+    margin: 0.75em auto;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 2.1rem;
+    margin: 1.6rem 0.6rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 12.5%;
+  }
+  .personalities_card {
+    margin: 1rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.6rem;
+  }
+  .card_text > p {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+}
+
+@media only screen and (min-width: 568px) and (orientation: landscape) {
+  #personalities_banner_container {
+    height: var(--vh);
+  }
+
+  #personalities_banner {
+    height: inherit;
+  }
+  #personalities_banner_img {
+    height: calc(var(--vh) - var(--headerHeight_S));
+  }
+  #galery_container {
+    margin: calc(var(--headerHeight_S)) auto 0 auto;
+  }
+  #personalities_header h1 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0.5rem;
+  }
+  #gallery_wrapper a {
+    width: 33.3%;
+  }
+  .personalities_card {
+    margin: 0.4rem;
+    height: 350px;
+  }
+
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+  .card_text {
+    top: 20%;
+    left: 8%;
+  }
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1rem;
+    margin: 1.6rem 0;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  #personalities_banner_desc > h1 {
+    font-size: 2.2rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.2rem;
+  }
+  #personalities_header h1 {
+    font-size: 1.4rem;
+    margin: 2.5rem 0.5rem;
+  }
+  #gallery_wrapper a {
+    width: 25%;
+  }
+
+  .personalities_card {
+    margin: 0.4rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  #personalities_banner_container {
+    height: 370px;
+  }
+
+  #personalities_banner {
+    height: 370px;
+  }
+  #personalities_banner_img {
+    height: 320px;
+  }
+  #personalities_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.2rem;
+  }
+  #personalities_content {
+    margin: calc(var(--headerHeight_M)) auto 0 auto;
+  }
+  #personalities_header h1 {
+    font-size: 1.5rem;
+    margin: 1.2rem 0.5rem;
+  }
+  #gallery_wrapper a {
+    width: 25%;
+  }
+
+  .personalities_card {
+    margin: 0.4rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  #personalities_banner_desc > h1 {
+    font-size: 2.8rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.4rem;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 1.7rem;
+    margin: 1.4rem 0.5rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 20%;
+  }
+  .personalities_card {
+    margin: 0.7rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
+  #personalities_banner_container {
+    height: 450px;
+  }
+
+  #personalities_banner {
+    height: 450px;
+  }
+  #personalities_banner_img {
+    height: 400px;
+  }
+  #personalities_banner_desc > h1 {
+    font-size: 3.2rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 1.8rem;
+  }
+  #personalities_content {
+    margin: calc(var(--headerHeight_L)) auto 0 auto;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 1.8rem;
+    margin: 1.6rem 0.6rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 20%;
+  }
+  .personalities_card {
+    margin: 0.7rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.4rem;
+  }
+  .card_text > p {
+    font-size: 1.1rem;
+    margin: 2rem 0;
+  }
+}
+@media only screen and (min-width: 1900px) and (orientation: landscape) {
+  #personalities_banner_desc > h1 {
+    font-size: 4.5rem;
+  }
+  #personalities_banner_desc > h2 {
+    font-size: 2.4rem;
+    margin: 0.75em auto;
+  }
+  #personalities_header {
+    width: 80%;
+  }
+  #personalities_header h1 {
+    font-size: 2.1rem;
+    margin: 1.6rem 0.6rem;
+  }
+  #gallery_wrapper {
+    width: 80%;
+  }
+  #gallery_wrapper a {
+    width: 12.5%;
+  }
+  .personalities_card {
+    margin: 1rem;
+    height: 350px;
+  }
+  .card_desc_slide::before {
+    height: 5%;
+  }
+  .card_desc_slide {
+    height: 175px;
+  }
+  .img_wrapper {
+    height: 175px;
+  }
+
+  .card_text > h2 {
+    font-size: 1.6rem;
+  }
+  .card_text > p {
+    font-size: 1.2rem;
+    margin: 2rem 0;
+  }
+}

@@ -1,0 +1,58 @@
+let resultContent = {
+  E: {
+    caption: "Mind",
+    caption_description: `This trait determines how we interact with our environment.`,
+    role: ["Extraverted", "Introverted"],
+    header: `You’re mostly Extraverted!`,
+    description: `Extraverted individuals prefer solitary activities and get exhausted by social interaction. They tend to be quite sensitive to external stimulation (e.g. sound, sight or smell) in general.`,
+  },
+  I: {
+    caption: "Mind",
+    caption_description: `This trait determines how we interact with our environment.`,
+    role: ["Extraverted", "Introverted"],
+    header: `You’re mostly Introverted!`,
+    description: `Introverted individuals prefer solitary activities and get exhausted by social interaction. They tend to be quite sensitive to external stimulation (e.g. sound, sight or smell) in general.`,
+  },
+  S: {
+    caption: "Energy",
+    caption_description: `This trait shows where we direct our mental energy.`,
+    role: ["Intuitive", "Observant"],
+    header: `You’re mostly Intuitve!`,
+    description: `Intuitive individuals are highly practical, pragmatic and down-to-earth. They tend to have strong habits and focus on what is happening or has already happened.`,
+  },
+  N: {
+    caption: "Energy",
+    caption_description: `This trait shows where we direct our mental energy.`,
+    role: ["Intuitive", "Observant"],
+    header: `You’re mostly Observant!`,
+    description: `Observant individuals are highly practical, pragmatic and down-to-earth. They tend to have strong habits and focus on what is happening or has already happened.`,
+  },
+  T: {
+    caption: "Nature",
+    caption_description: `This trait determines how we make decisions and cope with emotions.`,
+    role: ["Thinking", "Feeling"],
+    header: `You’re mostly Thinking!`,
+    description: `Thinking individuals are sensitive and emotionally expressive. They are more empathic and less competitive than Thinking types, and focus on social harmony and cooperation.`,
+  },
+  F: {
+    caption: "Nature",
+    caption_description: `This trait determines how we make decisions and cope with emotions.`,
+    role: ["Thinking", "Feeling"],
+    header: `You’re mostly Feeling!`,
+    description: `Feeling individuals are sensitive and emotionally expressive. They are more empathic and less competitive than Thinking types, and focus on social harmony and cooperation.`,
+  },
+  J: {
+    caption: "Tactics",
+    caption_description: `This trait reflects our approach to work, planning and decision-making.`,
+    role: ["Judging", "Prospecting"],
+    header: `You’re mostly Juding!`,
+    description: `Juding individuals are very good at improvising and spotting opportunities. They tend to be flexible, relaxed nonconformists who prefer keeping their options open.`,
+  },
+  P: {
+    caption: "Tactics",
+    caption_description: `This trait reflects our approach to work, planning and decision-making.`,
+    role: ["Judging", "Prospecting"],
+    header: `You’re mostly Prospecting!`,
+    description: `Prospecting individuals are very good at improvising and spotting opportunities. They tend to be flexible, relaxed nonconformists who prefer keeping their options open.`,
+  },
+};

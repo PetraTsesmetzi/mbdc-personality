@@ -5,8 +5,6 @@ export default class Router {
   constructor(config) {
     this.routes = config.routes;
     this.routerOutlet = document.getElementById("content");
-    /* this.routerOutlet = document.createElement("section");
-    content.appendChild(this.routerOutlet); */
     config.store.subscribe(this.render.bind(this));
     config.store.dispatch(loadRoute({ path: config.path }));
     this.handleBackButton(config.store);
@@ -16,6 +14,7 @@ export default class Router {
       let content = "";
       if (event.state) {
         content = event.state.page;
+        console.log("onpopstate");
         store.dispatch(loadRoute({ path: content, back: true }));
       }
     };
@@ -25,7 +24,8 @@ export default class Router {
     console.log(state.route);
     let includesPath = Object.keys(this.routes).includes(state.route.path);
     if (!includesPath) state.route.path = "pagenotfound";
-
+    console.log("previousState.route.path: " + previousState.route.path);
+    console.log("state.route.path: " + state.route.path);
     if (previousState.route.path != state.route.path) {
       let page = state.route.path;
       let back = state.route.back;
@@ -35,7 +35,7 @@ export default class Router {
       if (!back) {
         history.pushState({ page }, null, `/${page}`);
       }
-
+      console.log(new this.routes[state.route.path]());
       this.routerOutlet.appendChild(new this.routes[state.route.path]());
     }
   }

@@ -1,26 +1,43 @@
-import { Homebanner } from "./homebanner";
+import "./../../css/home.css";
+import { store } from "./../Common/store";
+import image from "../../img/banner_index.png";
+import { loadRoute } from "../Routing/actions";
 
-export class DefaultComponent {
+export class DefaultComponent extends HTMLElement {
   constructor() {
-    let content = document.getElementById("content");
-    let section = document.createElement("section");
-    section.setAttribute("id", "home_banner_container");
-    content.appendChild(section);
-    this.render(section);
+    super();
+    this.store = store;
+    this.path = "personalitytest";
   }
-  render(section) {
-    let banner = new Homebanner();
-    section.appendChild(banner);
+
+  handleClick() {
+    this.store.dispatch(loadRoute({ path: this.path }));
   }
-  /* connectedCallback() {
+  connectedCallback() {
     this.render();
+    this.store.subscribe(this.render.bind(this));
+    let button = document.getElementById("test_btn");
+    this.addEventListener("click", this.handleClick);
+    console.log(button);
   }
 
   render() {
-    this.innerHTML = `<div style="height:100px; background-color:gold">
-          <span>I am the home</span>
-          </div>`;
-  } */
+    this.innerHTML = `<div id="home_banner">
+        <div id="home_banner_desc">
+          <h1>WHO AM I?</h1>
+          <h2>
+            Take our Personality Test and get a “freakishly&nbsp;accurate”
+            <br />
+            description of who you are and why you do things the way
+            you do.
+          </h2>
+          <button id="test_btn" class="button">Take the Test</button>
+        </div>
+      </div>
+      <div id="home_banner_img">
+        <img src="${image}" alt="banner_index" />
+      </div>`;
+  }
 }
 
-/* customElements.define("default-component", DefaultComponent); */
+customElements.define("home-component", DefaultComponent);
