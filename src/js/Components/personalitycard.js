@@ -1,20 +1,23 @@
-/* import "./../../css/personalities.css"; */
+import "../../css/personalities.css";
 
 export class Personalitycard extends HTMLElement {
   constructor(type) {
     super();
     this.type = type;
-    console.log("p: " + type.title);
   }
   connectedCallback() {
     this.render();
   }
   render() {
-    this.innerHTML = `
+    /*  let path = pathToImg(`./banner_index.png`);
+    console.log(path); */
+    let path = this.type.img;
+    import(`../../img/thumbnail${path}`).then((image) => {
+      this.innerHTML = `
       <a href="personality.html" onclick="sendType(1)">
         <div class="personalities_card">
             <div class="img_wrapper">
-              <img src=${this.type.img} alt="ENFJ_Wonderwoman">
+             <img src=${image.default} alt="name"/>
             </div>
           <div class="card_desc_slide">
             <div class="card_text">
@@ -26,6 +29,7 @@ export class Personalitycard extends HTMLElement {
       </a>
    
   `;
+    });
   }
 }
 
