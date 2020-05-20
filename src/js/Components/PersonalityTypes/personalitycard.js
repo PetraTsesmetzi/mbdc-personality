@@ -1,20 +1,27 @@
-import "../../css/personalities.css";
-
+import { store } from "../../Common/store";
 export class Personalitycard extends HTMLElement {
   constructor(type) {
     super();
     this.type = type;
+    this.store = store;
+    this.route = {
+      path: `personalitytype/${this.type.title}`,
+    };
+  }
+  handleClick() {
+    console.log("click");
+    console.log(this.route.path);
+    /*  this.store.dispatch(loadRoute({ path: this.route.path })); */
   }
   connectedCallback() {
     this.render();
+    this.addEventListener("click", this.handleClick);
   }
   render() {
-    /*  let path = pathToImg(`./banner_index.png`);
-    console.log(path); */
     let path = this.type.img;
-    import(`../../img/thumbnail${path}`).then((image) => {
+    import(`../../../img/thumbnail${path}`).then((image) => {
       this.innerHTML = `
-      <a href="personality.html" onclick="sendType(1)">
+      <li>
         <div class="personalities_card">
             <div class="img_wrapper">
              <img src=${image.default} alt="name"/>
@@ -26,9 +33,7 @@ export class Personalitycard extends HTMLElement {
             </div>
           </div>
         </div>
-      </a>
-   
-  `;
+      </li>`;
     });
   }
 }

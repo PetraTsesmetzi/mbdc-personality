@@ -1,6 +1,6 @@
 //routes
 import { DefaultComponent } from "../Components/default";
-import { Personalitytype } from "../Components/personalitytype";
+import { Personalitytype } from "../Components/PersonalityTypes/personalitytype";
 import { Personalitytest } from "../Components/personalitytest";
 import { Contact } from "../Components/contact";
 import { Pagenotfound } from "../Components/pagenotfound";

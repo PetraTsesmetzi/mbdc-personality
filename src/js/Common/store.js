@@ -25,7 +25,6 @@ Store.prototype.dispatch = function (action) {
   };
 
   subscribers.forEach((subscriber) => {
-    console.log("render");
     subscriber(this.previousState, this.state);
   });
 };
