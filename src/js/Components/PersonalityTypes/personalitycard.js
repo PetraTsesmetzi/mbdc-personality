@@ -1,4 +1,4 @@
-import { store } from "../../Common/store";
+import { store } from "../Common/store";
 export class Personalitycard extends HTMLElement {
   constructor(type) {
     super();
@@ -9,8 +9,7 @@ export class Personalitycard extends HTMLElement {
     };
   }
   handleClick() {
-    console.log("click");
-    console.log(this.route.path);
+    /* richtung card */
     /*  this.store.dispatch(loadRoute({ path: this.route.path })); */
   }
   connectedCallback() {

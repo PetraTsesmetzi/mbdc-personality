@@ -1,4 +1,4 @@
-import "./../../css/burger.css";
+import "./../../../css/burger.css";
 /* sets the functionality of the burgerbutton for the nav and
 resets classes if you resize your windows */
 export class BurgerBtn {

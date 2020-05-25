@@ -3,7 +3,6 @@ export class Pagenotfound extends HTMLElement {
     super();
   }
   connectedCallback() {
-    console.log("not found");
     this.render();
   }
   render() {

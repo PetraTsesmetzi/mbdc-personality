@@ -1,4 +1,4 @@
-let resultContent = {
+export const resultContent = {
   E: {
     caption: "Mind",
     caption_description: `This trait determines how we interact with our environment.`,

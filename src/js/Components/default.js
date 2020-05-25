@@ -1,5 +1,5 @@
 import "./../../css/home.css";
-import { store } from "./../Common/store";
+import { store } from "./Common/store";
 import image from "../../img/banner_index.png";
 import { loadRoute } from "../Routing/actions";
 
@@ -18,11 +18,10 @@ export class DefaultComponent extends HTMLElement {
     this.store.subscribe(this.render.bind(this));
     let button = document.getElementById("test_btn");
     this.addEventListener("click", this.handleClick);
-    console.log(button);
   }
 
   render() {
-    this.innerHTML = `<div id="home_banner">
+    this.innerHTML = `<section id="home_banner_container"><div id="home_banner">
         <div id="home_banner_desc">
           <h1>WHO AM I?</h1>
           <h2>
@@ -36,7 +35,8 @@ export class DefaultComponent extends HTMLElement {
       </div>
       <div id="home_banner_img">
         <img src="${image}" alt="banner_index" />
-      </div>`;
+      </div>
+      </section>`;
   }
 }
 

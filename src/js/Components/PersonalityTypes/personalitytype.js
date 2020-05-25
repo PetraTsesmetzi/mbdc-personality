@@ -1,7 +1,7 @@
 import "../../../css/personalities.css";
-import { store } from "../../Common/store";
+import { store } from "../Common/store";
 import { Personalitycard } from "./personalitycard";
-import { Banner } from "../../Common/banner";
+import { Banner } from "../Common/banner";
 import { personalities } from "../../../data/personalities";
 export class Personalitytype extends HTMLElement {
   constructor() {
@@ -15,10 +15,11 @@ export class Personalitytype extends HTMLElement {
       h2: "Explore the 16 DC Universe Characters!",
     };
     this.banner = new Banner(bannerconfig);
-    console.log(this.banner);
   }
   connectedCallback() {
     this.render();
+    let personalities_wrapper = document.getElementById("personalities_wrapper");
+    personalities_wrapper.prepend(this.banner);
     let gallery_wrapper = document.getElementById("gallery_list");
     Object.values(personalities).map((type) => {
       let card = new Personalitycard(type);
@@ -26,14 +27,16 @@ export class Personalitytype extends HTMLElement {
     });
   }
   render() {
-    this.innerHTML = `${this.banner.getbanner} 
-    <section id="personalities_content">
-    <div id="personalities_header">
-     <h1>FEATURED PERSONALTIES</h1>
-    </div>
-    <div id="personalities_gallery">
-      <div id="gallery_wrapper"><ul id="gallery_list"></ul></div>
-    </div>
+    this.innerHTML = `
+    <section id="personalities_wrapper">
+      <section id="personalities_content">
+        <div id="personalities_header">
+        <h1>FEATURED PERSONALTIES</h1>
+        </div>
+        <div id="personalities_gallery">
+          <div id="gallery_wrapper"><ul id="gallery_list"></ul></div>
+        </div>
+      </section>
     </section>
   
   `;

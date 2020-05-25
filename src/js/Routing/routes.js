@@ -1,10 +1,10 @@
 //routes
 import { DefaultComponent } from "../Components/default";
 import { Personalitytype } from "../Components/PersonalityTypes/personalitytype";
-import { Personalitytest } from "../Components/personalitytest";
+import { Personalitytest } from "../Components/Personalitytest/personalitytest";
 import { Contact } from "../Components/contact";
 import { Pagenotfound } from "../Components/pagenotfound";
-import { KendalComponent } from "../Common/kendal";
+import { KendalComponent } from "../Components/Common/kendal";
 
 export const routes = {
   home: DefaultComponent,

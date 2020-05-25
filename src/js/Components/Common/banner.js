@@ -1,9 +1,12 @@
-export class Banner {
+export class Banner extends HTMLElement {
   constructor(bannerconfig) {
+    super();
     this.bannerconfig = bannerconfig;
-    console.log("bannerconstructor");
   }
-  get getbanner() {
+  connectedCallback() {
+    this.render();
+  }
+  render() {
     return (this.innerHTML = `<section id=${this.bannerconfig.containerId}>
       <div id=${this.bannerconfig.bannerId}>
         <div id=${this.bannerconfig.imgId}></div>
@@ -15,3 +18,4 @@ export class Banner {
     </section>`);
   }
 }
+customElements.define("banner-component", Banner);

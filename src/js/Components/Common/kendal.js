@@ -1,5 +1,5 @@
 import { store } from "./store";
-import { increaseKendal } from "../Routing/actions";
+import { increaseKendal } from "../../Routing/actions";
 
 export class KendalComponent extends HTMLElement {
   constructor() {
@@ -9,7 +9,6 @@ export class KendalComponent extends HTMLElement {
     this.store.subscribe(this.subscriber);
   }
   handleClick() {
-    console.log("kendal clicked");
     this.store.dispatch(increaseKendal(1));
   }
   connectedCallback() {

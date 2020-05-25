@@ -1,5 +1,5 @@
 //NavLinks
-import "./../../css/nav.css";
+import "./../../../css/nav.css";
 import { ListItem } from "./listItem";
 import { BurgerBtn } from "./burger";
 

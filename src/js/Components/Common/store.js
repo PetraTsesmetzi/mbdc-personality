@@ -2,10 +2,12 @@ function Store() {
   this.previousState = {
     route: { path: null },
     kendal: { counter: 0 },
+    progress: { counter: 0 },
   };
   this.state = {
     route: { path: null },
     kendal: { counter: 0 },
+    progress: { counter: 0 },
   };
 }
 let subscribers = [];
@@ -22,6 +24,7 @@ Store.prototype.dispatch = function (action) {
   this.state = {
     route: changeRoute(this.state.route, action),
     kendal: kendalCount(this.state.kendal, action),
+    progress: progressCount(this.state.progress, action),
   };
 
   subscribers.forEach((subscriber) => {
@@ -38,6 +41,16 @@ function changeRoute(route, action) {
       return route || "";
   }
 }
+function progressCount(progress, action) {
+  switch (action.type) {
+    case "INCREASE_PROGRESS":
+      let newProgress = { counter: progress.counter + 5 };
+      return newProgress;
+    default:
+      return progress || { counter: 0 };
+  }
+}
+
 function kendalCount(kendal, action) {
   switch (action.type) {
     case "INCREASE_KENDAL":

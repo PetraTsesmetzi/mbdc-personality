@@ -1,9 +1,9 @@
 //index.js
 import Router from "./router";
 import { routes } from "./routes";
-import { NavLinks } from "../Components/navlinks";
-import { store } from "../Common/store";
-import { Navbar } from "../Components/navbar";
+import { NavLinks } from "../Components/Navigation/navlinks";
+import { store } from "../Components/Common/store";
+import { Navbar } from "../Components/Navigation/navbar";
 
 export default class Index {
   constructor() {

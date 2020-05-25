@@ -6,6 +6,13 @@ export function loadRoute(route) {
   };
 }
 
+export function increaseProgress(number) {
+  return {
+    type: "INCREASE_PROGRESS",
+    number,
+  };
+}
+
 export function increaseKendal(count) {
   return {
     type: "INCREASE_KENDAL",
