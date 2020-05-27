@@ -19,7 +19,7 @@
   --headerNavColor: #22262a;
   --headerHeight_S: 3rem;
   --headerHeight_M: 4rem;
-  --footerHeight_S: 200px;
+  --footerHeight_S: 220px;
 
   --links: 6;
 
@@ -59,9 +59,8 @@
 
   /* --- CONTACT --- */
   --contactError: #dc143c;
-  --contactBgSuccess: #965d5d;
-  --contactFontSuccess: #c7a3a3;
-
+  --contactBgSuccess: #3385ff;
+  --contactFontSuccess: #fff;
   --shadowColor: rgb(235, 232, 232);
 }
 .resize_animation_stopper * {

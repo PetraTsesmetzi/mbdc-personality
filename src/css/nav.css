@@ -75,7 +75,10 @@ list-item {
   text-decoration: none;
   font-size: 1.2rem;
 }
-
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 @media only screen and (min-width: 992px) {
   #navigation_content {
     height: var(--headerHeight_M);

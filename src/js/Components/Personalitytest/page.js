@@ -13,8 +13,6 @@ export class Page extends HTMLElement {
   }
   //scrolls to the next question after pressing a radio
   handleChange(e) {
-    console.log("this.scroll: " + Viewportdetector.detectDistance());
-    console.log(e.y);
     let startPosition = document.documentElement.scrollTop;
     let endPosition = startPosition + Viewportdetector.detectDistance();
     let scrolling = setInterval(function () {

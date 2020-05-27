@@ -92,6 +92,7 @@
   height: 6px;
   border-radius: 0.3rem;
   background-color: var(--progressBarColor);
+  transition: all 1s ease-in-out;
 }
 /* --- TEST --- */
 #page {
