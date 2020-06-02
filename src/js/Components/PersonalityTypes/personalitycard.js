@@ -1,16 +1,20 @@
 import { store } from "../Common/store";
+import { loadRoute } from "../../Routing/actions";
+import { sendType } from "../../Routing/actions";
 export class Personalitycard extends HTMLElement {
   constructor(type) {
     super();
     this.type = type;
     this.store = store;
     this.route = {
-      path: `personalitytype/${this.type.title}`,
+      path: `personalitytypes/personality_${this.type.id}`,
     };
   }
   handleClick() {
     /* richtung card */
-    /*  this.store.dispatch(loadRoute({ path: this.route.path })); */
+    localStorage.setItem("personality", JSON.stringify({ type: this.type }));
+    this.store.dispatch(loadRoute({ path: this.route.path }));
+    this.store.dispatch(sendType({ type: this.type }));
   }
   connectedCallback() {
     this.render();

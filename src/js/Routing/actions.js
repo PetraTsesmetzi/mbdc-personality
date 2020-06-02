@@ -5,10 +5,28 @@ export function loadRoute(route) {
     route,
   };
 }
+export function sendType(personaltyType) {
+  return {
+    type: "CHANGE_TYPE",
+    personaltyType,
+  };
+}
+export function sendTestresult(testresult) {
+  return {
+    type: "CHANGE_TESTRESULT",
+    testresult,
+  };
+}
 
 export function increaseProgress(number) {
   return {
     type: "INCREASE_PROGRESS",
+    number,
+  };
+}
+export function resetProgress(number) {
+  return {
+    type: "RESET_PROGRESS",
     number,
   };
 }

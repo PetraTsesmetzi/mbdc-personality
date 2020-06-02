@@ -24,7 +24,7 @@ export class Score {
     type += this.getLetter(con4, "J", "P");
     return type;
   }
-  //returns the letters for the type and add percetages to the new result object
+  //returns the letters for the type and add percentages to the new result object
   getLetter(condition, letter1, letter2) {
     let cache = [];
     let a = 0;

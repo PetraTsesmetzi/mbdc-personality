@@ -4,11 +4,14 @@ import { TestValidator } from "./testvalidator";
 import { questions_data } from "../../../data/questions";
 import { store } from "../Common/store";
 import { increaseProgress } from "../../Routing/actions";
+import { resetProgress } from "../../Routing/actions";
 import { Viewportdetector } from "../Common/viewportdetector";
-
 import { Score } from "./score";
+import { loadRoute } from "../../Routing/actions";
+import { sendTestresult } from "../../Routing/actions";
 /* 
 contains a page(with questions) and a next button
+loops through 4 pages until the test is valid and finished
 */
 export class Test extends HTMLElement {
   constructor() {
@@ -23,8 +26,8 @@ export class Test extends HTMLElement {
     this.testresult = [];
     this.Score = null;
   }
-  //after presseing the next button
-  //validates the form goes to the next sid if its valide
+  //after pushing the next button
+  //validates the form goes to the next Page if its valide
   handleClick() {
     let radios = document.querySelectorAll(".radios");
     let error_message = document.getElementById("error_message");
@@ -68,18 +71,24 @@ export class Test extends HTMLElement {
     this.render(this.start_question, this.end_question);
   }
   render(start, end) {
-    this.innerHTML = `<section id="content_wrapper"> 
+    this.innerHTML = `
+    <section id="content_container"> 
+      <section id="content_wrapper"> 
+      </section>
+      <p id="error_message" class="err_message">
+        Please answer all questions!
+      </p>
+      <div id="btn_container">
+        <div id="btn_next">Next</div>
+      </div>
     </section>
-     <p id="error_message" class="err_message">
-      Please answer all questions!
-    </p>
-    <div id="btn_container">
-      <div id="btn_next">Next</div>
-    </div>
    `;
     this.loadcontent(start, end);
   }
   //loads the content,create a page and a progress
+  //after the last question was answered and the next button was pressed
+  //the testresult will be loaded
+
   loadcontent(start, end) {
     if (start < questions_data.length) {
       this.page = new Page(start, end);
@@ -95,8 +104,12 @@ export class Test extends HTMLElement {
       let button = document.getElementById("btn_next");
       button.addEventListener("click", this.handleClick.bind(this));
     } else {
-      console.log(this.testresult);
+      this.store.dispatch(resetProgress(0));
       this.Score = new Score(this.testresult);
+      let resultObj = this.Score.getResultObj;
+      localStorage.setItem("testresult", JSON.stringify({ result: resultObj }));
+      this.store.dispatch(loadRoute({ path: "personalitytest/testresult" }));
+      this.store.dispatch(sendTestresult({ result: resultObj }));
     }
   }
   //fills the testresult array with a- and b-answers for scoring
@@ -109,7 +122,7 @@ export class Test extends HTMLElement {
       });
     }
   }
-  // resets the errorcolor of radios when radio button was pressed
+  // resets the errorcolor of radios when unanswered question was answered
   resetColorRadios(event, radios) {
     let target;
     if (event.target.getAttribute("class") == "custom_radio") {

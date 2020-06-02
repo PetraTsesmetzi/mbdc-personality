@@ -57,6 +57,9 @@
 }
 
 /* --- TESTPROGRESS --- */
+#content_container {
+  padding: 2rem 0;
+}
 #test_header {
   width: 100%;
   position: fixed;
@@ -187,7 +190,7 @@ label input {
   opacity: 1;
 }
 #btn_next {
-  margin: 1rem auto 2rem auto;
+  margin: 0 auto;
   height: 50px;
   width: 200px;
   font-size: 1.2rem;
@@ -202,6 +205,9 @@ label input {
   background-color: var(--btnHoverColor);
 }
 @media only screen and (min-width: 568px) and (orientation: portrait) {
+  #content_container {
+    min-height: calc(100vh - 370px);
+  }
   fieldset {
     width: 75%;
   }
@@ -211,12 +217,11 @@ label input {
 }
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  fieldset {
-    width: 95%;
+  #page {
+    width: 85%;
+    margin: 0 auto;
   }
-  #error_message {
-    width: 95%;
-  }
+
   #test_banner_container {
     height: 370px;
   }
@@ -229,6 +234,7 @@ label input {
   #test_banner_img {
     height: 320px;
   }
+
   #progress_section {
     margin-top: 0;
     height: 48px;
@@ -238,6 +244,12 @@ label input {
     top: -48px;
     background-color: var(--secondBgColor);
     z-index: 130;
+  }
+  fieldset {
+    width: 100%;
+  }
+  #error_message {
+    width: 85%;
   }
   legend {
     width: auto;
@@ -272,7 +284,13 @@ label input {
     text-align: right;
   }
 }
+
 @media only screen and (min-width: 992px) and (orientation: portrait) {
+  #page {
+    width: 75%;
+    margin: 0 auto;
+  }
+
   #progress_section {
     margin-top: 0;
     height: 48px;
@@ -283,11 +301,15 @@ label input {
     background-color: var(--secondBgColor);
     z-index: 130;
   }
+
+  #error_message {
+    width: 75%;
+  }
 }
 
-/* @media only screen and (min-width: 1200px) and (orientation: portrait) {
- 
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
 }
+/*
 @media only screen and (min-width: 1600px) and (orientation: portrait) {
   
 }
@@ -295,6 +317,9 @@ label input {
   
 } */
 @media only screen and (min-width: 568px) and (orientation: landscape) {
+  #content_container {
+    min-height: calc(100vh - 370px);
+  }
   fieldset {
     width: 75%;
   }
@@ -303,11 +328,15 @@ label input {
   }
 }
 @media only screen and (min-width: 768px) and (orientation: landscape) {
+  #page {
+    width: 85%;
+    margin: 0 auto;
+  }
   fieldset {
-    width: 95%;
+    width: 100%;
   }
   #error_message {
-    width: 95%;
+    width: 85%;
   }
   legend {
     width: auto;
@@ -343,6 +372,10 @@ label input {
   }
 }
 @media only screen and (min-width: 992px) and (orientation: landscape) {
+  #page {
+    width: 75%;
+    margin: 0 auto;
+  }
   #test_banner_container {
     height: 370px;
   }
@@ -365,14 +398,15 @@ label input {
     background-color: var(--secondBgColor);
     z-index: 130;
   }
-}
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
+
   fieldset {
-    width: 70%;
+    width: 100%;
   }
   #error_message {
-    width: 70%;
+    width: 75%;
   }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
   legend {
     font-size: 1.6rem;
     font-weight: bold;

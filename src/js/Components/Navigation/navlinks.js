@@ -15,9 +15,9 @@ export class NavLinks {
     this.render(nav);
   }
   render(nav) {
-    Object.keys(this.routes).map((route) => {
-      if (route != "" && route != "pagenotfound") {
-        let link = new ListItem(route, this.store, this.btn);
+    Object.values(this.routes).map((route) => {
+      if (route.flag) {
+        let link = new ListItem(route.title, this.store, this.btn);
         nav.appendChild(link);
       }
     });

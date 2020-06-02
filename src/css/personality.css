@@ -1,0 +1,328 @@
+/* ---PERSONALITYBANNER --- */
+#personality_banner_container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainBgColor);
+  position: relative;
+  padding-top: var(--headerHeight_S);
+}
+
+#personality_banner {
+  width: 100%;
+  height: calc(100vh - var(--headerHeight_S));
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#personality_banner_img {
+  width: 100%;
+  height: 80%;
+}
+#personality_banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+#personality_banner_desc {
+  height: 20%;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+#personality_banner_desc > h1 {
+  color: var(--mainFontColor);
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+#personality_banner_desc > h2 {
+  color: var(--mainFontColor);
+  font-size: 1.2rem;
+}
+/* --- PERSNALITYTEXT/DESCRIPTION --- */
+#personality_content {
+  width: 100%;
+  margin: var(--headerHeight_S) auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#personality_content > div {
+  text-align: left;
+}
+.container_left {
+  width: 100%;
+  padding-left: 2rem;
+}
+.container_right {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 0 2rem;
+}
+.container_left > h1 {
+  color: var(--secondFontColor);
+  font-size: 1.4rem;
+}
+
+.container_right > h1 {
+  color: var(--thirdFontColor);
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.container_right p {
+  margin-bottom: 1rem;
+  line-height: 1.5rem;
+  color: var(--fourthFontColor);
+  text-align: left;
+}
+.personality-attributes {
+  font-weight: bold;
+  color: var(--thirdFontColor);
+}
+
+@media only screen and (min-width: 568px) and (orientation: portrait) {
+  #personality_banner_container {
+    height: 100vh;
+  }
+  #personality_banner {
+    height: calc(100vh - var(--headerHeight_S));
+  }
+
+  #personality_banner_desc {
+    padding-left: 3rem;
+  }
+
+  .container_left {
+    padding-left: 3rem;
+  }
+  .container_right {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: portrait) {
+  #personality_banner_container {
+    height: 370px;
+  }
+  #personality_banner {
+    height: calc(370px - var(--headerHeight_S));
+    width: 80%;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #personality_banner_img {
+    width: 350px;
+    height: 100%;
+  }
+
+  #personality_banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  #personality_banner_desc {
+    width: 100%;
+    height: 30%;
+  }
+  #personality_banner_desc > h1 {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  #personality_content {
+    height: calc(100vh - 370px);
+    margin: 0;
+    padding: 3rem 0;
+  }
+  .container_left {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .container_right {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  #personality_banner_container {
+    height: 370px;
+    padding-top: var(--headerHeight_M);
+  }
+  #personality_banner {
+    height: 300px;
+    width: 75%;
+    margin: 0 auto;
+    padding: 0rem;
+  }
+
+  #personality_content {
+    width: 75%;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  #personality_content > div {
+    flex: 1 1 auto;
+  }
+
+  .container_left {
+    border-right: 1px solid var(--fourthbtnHoverColor);
+    height: 80%;
+    width: 20%;
+    padding: 0;
+    margin-top: 0;
+  }
+  .container_left > h1 {
+    text-align: left;
+    margin: 1rem 0;
+  }
+  .container_right {
+    height: 80%;
+    width: 80%;
+    padding: 0 1rem;
+    margin-top: 0;
+  }
+  .container_right > h1 {
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+}
+@media only screen and (min-width: 1600px) and (orientation: portrait) {
+  #personality_banner_img {
+    width: 450px;
+    height: 100%;
+  }
+}
+@media only screen and (min-width: 1900px) and (orientation: portrait) {
+}
+
+@media only screen and (min-width: 568px) and (orientation: landscape) {
+  #personality_banner_container {
+    height: 100vh;
+  }
+  #personality_banner {
+    height: calc(100vh - var(--headerHeight_S));
+    width: 100%;
+    padding: 0 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #personality_banner_img {
+    width: 55%;
+    height: 100%;
+  }
+
+  #personality_banner_desc {
+    width: 45%;
+    height: 30%;
+  }
+  #personality_content {
+    margin: calc(var(--headerHeight_S)) auto 0 auto;
+  }
+
+  .container_left {
+    padding-left: 3rem;
+  }
+  .container_right {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  #personality_content {
+    margin: calc(var(--headerHeight_S)) auto;
+  }
+  .container_left {
+    padding: 0 4rem;
+  }
+  .container_right {
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  #personality_banner_container {
+    height: 370px;
+    padding-top: var(--headerHeight_M);
+  }
+  #personality_banner {
+    height: calc(370px - var(--headerHeight_M));
+    width: 70%;
+    padding: 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #personality_banner_img {
+    width: 350px;
+    height: 100%;
+  }
+
+  #personality_banner_desc {
+    width: 100%;
+    height: 30%;
+  }
+
+  #personality_content {
+    width: 70%;
+    margin: calc(var(--headerHeight_M)) auto;
+    padding: 0rem;
+    flex-direction: row;
+  }
+
+  #personality_content > div {
+    flex: 1 1 auto;
+  }
+
+  .container_left {
+    border-right: 1px solid var(--fourthmainBgColor);
+    width: 20%;
+    padding: 0;
+    margin-top: 0;
+  }
+  .container_left > h1 {
+    text-align: left;
+    margin: 1rem 0;
+  }
+  .container_right {
+    width: 80%;
+    padding: 0 1rem;
+    margin-top: 0;
+  }
+  .container_right > h1 {
+    margin: 1rem 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+}
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
+  #personality_content {
+    height: calc(100vh - 370px);
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+  #personality_banner_img {
+    width: 450px;
+    height: 100%;
+  }
+}

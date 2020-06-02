@@ -7,7 +7,8 @@ export class Banner extends HTMLElement {
     this.render();
   }
   render() {
-    return (this.innerHTML = `<section id=${this.bannerconfig.containerId}>
+    return (this.innerHTML = `
+      <section id=${this.bannerconfig.containerId}>
       <div id=${this.bannerconfig.bannerId}>
         <div id=${this.bannerconfig.imgId}></div>
         <div id=${this.bannerconfig.descId}>

@@ -8,16 +8,12 @@ export class ContactForm extends HTMLElement {
   }
   handleSubmit(e) {
     e.preventDefault();
-    console.log("click");
+
     const contactFormValidator = new ContactFormValidator();
   }
   connectedCallback() {
     this.render();
     const submit_btn = document.getElementById("submit_btn");
-    /*  submit_btn.addEventListener("click", (event) => {
-      event.preventDefault();
-      console.log("click");
-    }); */
     submit_btn.addEventListener("click", this.handleSubmit.bind(this));
   }
   render() {

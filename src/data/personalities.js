@@ -1,5 +1,6 @@
 export const personalities = {
   1: {
+    id: 1,
     title: "ENFJ",
     img: "/ENFJ_Wonderwoman_1.jpg",
     caption: "Wonderwoman",
@@ -38,6 +39,7 @@ export const personalities = {
     weakness: ` Overly Idealistic | Too Selfless | Too Sensitive `,
   },
   2: {
+    id: 2,
     title: "ENFP",
     caption: "HarleyQuinn",
     img: "/ENFP_HarleyQuinn_1.jpg",
@@ -63,6 +65,7 @@ export const personalities = {
     weakness: ` Poor Practical Skills | Find it Difficult to Focus | Overthink Things `,
   },
   3: {
+    id: 3,
     title: "ENTJ",
     caption: "Aquaman",
     img: "/ENTJ_aquaman_1.jpg",
@@ -85,6 +88,7 @@ export const personalities = {
     weakness: ` Stubborn and Dominant | Intolerant | Impatient `,
   },
   4: {
+    id: 4,
     title: "ENTP",
     caption: "Joker",
     img: "/ENTP_joker_1.jpg",
@@ -105,6 +109,7 @@ export const personalities = {
   },
 
   5: {
+    id: 5,
     title: "ESFJ",
     caption: "Starfire",
     img: "/ESFJ_starfire_1.jpg",
@@ -131,6 +136,7 @@ export const personalities = {
     weakness: ` Inflexible | Often Too Needy  | Too Selfless `,
   },
   6: {
+    id: 6,
     title: "ESTJ",
     caption: "Hawkman",
     img: "/ESTJ_Hawkman_1.jpg",
@@ -161,6 +167,7 @@ export const personalities = {
     weakness: ` Inflexible and Stubborn | Judgmental  | Difficulty Expressing Emotion `,
   },
   7: {
+    id: 7,
     title: "ESTP",
     caption: "Catwoman",
     img: "/ESTP_catwoman_1.jpg",
@@ -191,6 +198,7 @@ export const personalities = {
     weakness: ` Insensitive | Impatient  | Risk-prone `,
   },
   8: {
+    id: 8,
     title: "ESFP",
     caption: "Green Lantern",
     img: "/ESFP_GreenLantern_1.jpg",
@@ -217,6 +225,7 @@ export const personalities = {
     weakness: ` Sensitive | Conflict-Averse  | Easily Bored `,
   },
   9: {
+    id: 9,
     title: "INFP",
     caption: "Flash",
     img: "/INFP_Flash_1.jpg",
@@ -246,6 +255,7 @@ export const personalities = {
     weakness: ` Impractical | Too Idealistic  | Difficult to Get to Know  `,
   },
   10: {
+    id: 10,
     title: "INFJ",
     caption: "Poison Eve",
     img: "/INFJ_PoisonEve_1.jpg",
@@ -273,6 +283,7 @@ export const personalities = {
     weakness: ` Sensitive | Extremely Private  | Perfectionistic  `,
   },
   11: {
+    id: 11,
     title: "INTJ",
     caption: "Batman",
     img: "/INTJ_batman_1.jpg",
@@ -297,6 +308,7 @@ export const personalities = {
     weakness: ` Arrogant | Judgmental | Overly Analytical  `,
   },
   12: {
+    id: 12,
     title: "INTP",
     caption: "Ridler",
     img: "/INTP_Riddler_1.jpg",
@@ -322,6 +334,7 @@ export const personalities = {
     weakness: ` Insensitive | Condescending | Loathe Rules and Guidelines  `,
   },
   13: {
+    id: 13,
     title: "ISFJ",
     caption: "Superman",
     img: "/ISFJ_Superman_1.jpg",
@@ -342,6 +355,7 @@ export const personalities = {
     weakness: ` Humble and Shy | Take Things Too Personally | Repress Their Feelings`,
   },
   14: {
+    id: 14,
     title: "ISFP",
     caption: "Zatana",
     img: "/ISFP_Zatana_1.jpg",
@@ -368,6 +382,7 @@ export const personalities = {
     weakness: ` Fiercely Independent | Unpredictable | Easily Stressed`,
   },
   15: {
+    id: 15,
     title: "ISTJ",
     caption: "John Stewart",
     img: "/ISTJ_John-Stewart_1.jpg",
@@ -398,6 +413,7 @@ export const personalities = {
     weakness: ` Stubborn | Insensitive | Always by the Book`,
   },
   16: {
+    id: 16,
     title: "ISTP",
     caption: "John Constantine",
     img: "/ISTP_JohnConstantine_1.jpg",

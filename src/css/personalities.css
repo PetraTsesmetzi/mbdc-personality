@@ -64,7 +64,8 @@
 #personalities_content {
   width: 100%;
   height: auto;
-  margin: var(--headerHeight_S) auto 0 auto;
+  margin: 0 auto;
+  padding: 3rem 0;
 }
 #personalities_header {
   width: 100%;
@@ -82,7 +83,7 @@
 #personalities_gallery {
   width: 100%;
   position: relative;
-  margin: 0 auto 2rem auto;
+  margin: 0 auto;
   height: auto;
 }
 #gallery_wrapper {
@@ -147,7 +148,7 @@ personalitycard-component {
   height: 160px;
   width: 100%;
   object-fit: cover;
-  object-position: 0 0;
+  object-position: top;
 }
 .personalities_card:hover img {
   transform: scale(1.2);
@@ -189,7 +190,9 @@ personalitycard-component {
   #personalities_banner_img {
     height: 320px;
   }
-
+  #personalities_content {
+    min-height: calc(100vh - 370px);
+  }
   .personalities_card {
     height: 350px;
   }
@@ -206,10 +209,15 @@ personalitycard-component {
 }
 @media only screen and (min-width: 992px) and (orientation: portrait) {
   #personalities_header h1 {
-    width: 750px;
+    width: 850px;
   }
   #gallery_list {
-    width: 750px;
+    width: 850px;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
+  #personalities_content {
+    min-height: calc(100vh - 370px);
   }
 }
 
@@ -274,7 +282,7 @@ personalitycard-component {
   }
 
   #personalities_content {
-    margin: calc(var(--headerHeight_M)) auto 0 auto;
+    margin: 0 auto;
   }
   #personalities_header h1 {
     width: 750px;
@@ -284,6 +292,9 @@ personalitycard-component {
   }
 }
 @media only screen and (min-width: 1200px) and (orientation: landscape) {
+  #personalities_banner_img {
+    min-height: 320px;
+  }
   #personalities_header h1 {
     width: 1120px;
   }

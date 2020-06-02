@@ -3,7 +3,7 @@ import { store } from "../Common/store";
 import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
 import { personalities } from "../../../data/personalities";
-export class Personalitytype extends HTMLElement {
+export class Personalitytypes extends HTMLElement {
   constructor() {
     super();
     const bannerconfig = {
@@ -43,4 +43,4 @@ export class Personalitytype extends HTMLElement {
   }
 }
 
-customElements.define("personalites-component", Personalitytype);
+customElements.define("personalites-component", Personalitytypes);
