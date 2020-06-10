@@ -1,205 +1,128 @@
-/* --- INDEXBANNER --- */
+.content_wrapper.on {
+  min-height: auto;
+}
+
 #home_banner_container {
   width: 100%;
-  height: calc(100vh - var(--headerHeight_S));
+  min-height: calc(100vh - var(--headerHeight_S));
   margin-top: var(--headerHeight_S);
-  background-color: #fff;
-  position: relative;
+  background-image: url(../img/banner_home.jpg);
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#home_banner_img {
+  width: 100%;
+  min-height: calc(100vh - var(--headerHeight_S));
+  background-color: rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-homebanner-component {
-  width: 100%;
-  height: inherit;
-}
-/* ---DESCRITPION --- */
-#home_banner {
-  height: calc(100vh - var(--headerHeight_S) - var(--jumboImgHeight_S));
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
+
 #home_banner_desc {
-  position: relative;
-  text-align: center;
+  color: var(--mainFontColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
+
 #home_banner_desc > h1 {
-  color: #151515;
   font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 1.3rem;
+  font-size: 1.8rem;
 }
+
 #home_banner_desc > h2 {
-  color: #151515;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
-  padding: 0 1rem;
+  font-size: 1rem;
+  margin: 1.5rem auto;
+  text-align: center;
 }
 .button {
   text-decoration: none;
-  border: 2px solid #151515;
-  background-color: #fff;
-  border-radius: 25px;
-  color: #151515;
-  padding: 10px 25px;
-  font-size: 1.2rem;
+  border: 2px solid var(--thirdBgColor);
+  background-color: var(--secondBgColor);
+  border-radius: 10px;
+  color: var(--thirdFontColor);
+  padding: 7px 15px;
+  font-size: 1rem;
   display: inline-block;
   font-weight: bolder;
-  margin-top: 1.3rem;
 }
 .button:hover {
-  background-color: #151515;
-  color: #fff;
+  background-color: var(--thirdBgColor);
+  color: var(--mainFontColor);
 }
-
-#home_banner_img {
-  width: 100%;
-  height: var(--jumboImgHeight_S);
-  position: relative;
+@media only screen and (min-width: 568px) and (orientation: portrait) {
 }
-#home_banner_img img {
-  width: 100%;
-  height: var(--jumboImgHeight_S);
-  object-fit: cover;
-  object-position: 50% 0;
-}
-
 @media only screen and (min-width: 768px) and (orientation: portrait) {
+  #home_banner_desc {
+    padding: 3rem;
+  }
   #home_banner_desc > h1 {
-    font-size: 2.8rem;
+    font-size: 2rem;
   }
   #home_banner_desc > h2 {
-    font-size: 1.1rem;
-    line-height: 1.3rem;
-    padding: 1.2rem;
+    font-size: 1.4rem;
+    margin: 2rem 0;
   }
   .button {
-    border-radius: 30px;
-    padding: 15px 30px;
-    font-size: 1.4rem;
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
   }
 }
+
 @media only screen and (min-width: 992px) and (orientation: portrait) {
   #home_banner_container {
-    height: auto;
+    min-height: calc(100vh - var(--headerHeight_M));
     margin-top: var(--headerHeight_M);
   }
-
-  #home_banner {
-    height: calc(
-      (100vh - var(--footerHeight_S) - var(--jumboImgHeight_M)) - var(--headerHeight_M)
-    );
-  }
-
   #home_banner_img {
-    height: var(--jumboImgHeight_M);
+    min-height: calc(100vh - var(--headerHeight_M));
   }
-  #home_banner_img img {
-    height: var(--jumboImgHeight_M);
+  #home_banner_desc {
+    padding: 4rem;
   }
-}
-
-@media only screen and (min-width: 1600px) and (orientation: portrait) {
-  #home_banner_container {
-    height: auto;
-    margin-top: var(--headerHeight_M);
-  }
-  #home_banner {
-    height: calc(
-      (100vh - var(--footerHeight_S) - var(--jumboImgHeight_L)) - var(--headerHeight_M)
-    );
-  }
-
-  #home_banner_desc > h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1.5rem;
-  }
-  #home_banner_desc > h2 {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    padding: 0 1rem;
-  }
-  .button {
-    margin-top: 1.8rem;
-  }
-
-  #home_banner_img {
-    height: var(--jumboImgHeight_L);
-  }
-
-  #home_banner_img img {
-    height: var(--jumboImgHeight_L);
-  }
-}
-
-@media only screen and (min-width: 568px) and (orientation: landscape) {
-  #home_banner_container {
-    height: calc(100vh - var(--headerHeight_S) + var(--jumboImgHeight_S));
-  }
-
-  #home_banner {
-    height: calc(100vh - var(--headerHeight_S));
-  }
-}
-
-@media only screen and (min-width: 992px) and (orientation: landscape) {
-  #home_banner_container {
-    height: auto;
-    margin-top: var(--headerHeight_M);
-  }
-
-  #home_banner {
-    height: calc((100vh - var(--jumboImgHeight_M)) - var(--headerHeight_M));
-  }
-
   #home_banner_desc > h1 {
     font-size: 2.6rem;
-    margin-bottom: 1.5rem;
   }
   #home_banner_desc > h2 {
-    font-size: 0.9rem;
-    line-height: 1.2rem;
-    padding: 0 1rem;
+    font-size: 1.8rem;
+    margin: 2.4rem 0;
   }
   .button {
-    margin-top: 1.8rem;
-  }
-
-  #home_banner_img {
-    height: var(--jumboImgHeight_M);
-  }
-
-  #home_banner_img img {
-    height: var(--jumboImgHeight_M);
+    border-radius: 20px;
+    padding: 12px 30px;
+    font-size: 1.8rem;
   }
 }
-
-@media only screen and (min-width: 1600px) and (orientation: landscape) {
-  #home_banner_container {
-    height: auto;
-    margin-top: var(--headerHeight_M);
-  }
-  #home_banner {
-    height: calc((100vh - var(--jumboImgHeight_L)) - var(--headerHeight_M));
-  }
+@media only screen and (min-width: 1200px) and (orientation: portrait) {
   #home_banner_desc > h1 {
-    font-size: 3.2rem;
-    margin-bottom: 1.5rem;
+    font-size: 3rem;
   }
   #home_banner_desc > h2 {
-    font-size: 1.2rem;
-    line-height: 1.4rem;
-    padding: 0 1rem;
+    font-size: 2.2rem;
+    margin: 2rem 0;
   }
-  .button {
-    margin-top: 1.8rem;
+}
+@media only screen and (min-width: 1600px) and (orientation: portrait) {
+  #home_banner_desc > h1 {
+    font-size: 3.4rem;
   }
-  #home_banner_img {
-    height: var(--jumboImgHeight_L);
+  #home_banner_desc > h2 {
+    font-size: 2.6rem;
+    margin: 2.4rem 0;
   }
-
-  #home_banner_img img {
-    height: var(--jumboImgHeight_L);
+}
+@media only screen and (min-width: 1900px) and (orientation: portrait) {
+  #home_banner_desc > h1 {
+    font-size: 3.8rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 3rem;
+    margin: 2.8rem 0;
   }
 }

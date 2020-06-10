@@ -21,8 +21,9 @@ export class Personalitycard extends HTMLElement {
     this.addEventListener("click", this.handleClick);
   }
   render() {
-    let path = this.type.img;
+    let path = this.type.img_s;
     import(`../../../img/thumbnail${path}`).then((image) => {
+      console.log(image.default);
       this.innerHTML = `
       <li>
         <div class="personalities_card">

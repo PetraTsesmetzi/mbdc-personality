@@ -1,7 +1,7 @@
 /* ---PERSONALITYBANNER --- */
 #personality_banner_container {
   width: 100%;
-  height: 100vh;
+  height: 456px;
   background-color: var(--mainBgColor);
   position: relative;
   padding-top: var(--headerHeight_S);
@@ -9,7 +9,7 @@
 
 #personality_banner {
   width: 100%;
-  height: calc(100vh - var(--headerHeight_S));
+  height: 408px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -84,13 +84,6 @@
 }
 
 @media only screen and (min-width: 568px) and (orientation: portrait) {
-  #personality_banner_container {
-    height: 100vh;
-  }
-  #personality_banner {
-    height: calc(100vh - var(--headerHeight_S));
-  }
-
   #personality_banner_desc {
     padding-left: 3rem;
   }
@@ -103,11 +96,7 @@
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  #personality_banner_container {
-    height: 370px;
-  }
   #personality_banner {
-    height: calc(370px - var(--headerHeight_S));
     width: 80%;
     padding: 0;
     margin: 0 auto;
@@ -118,7 +107,7 @@
   }
 
   #personality_banner_img {
-    width: 350px;
+    width: 50%;
     height: 100%;
   }
 
@@ -129,24 +118,24 @@
     object-position: top;
   }
   #personality_banner_desc {
-    width: 100%;
+    width: 50%;
     height: 30%;
   }
   #personality_banner_desc > h1 {
     font-size: 2.4rem;
     font-weight: bold;
-    margin-bottom: 1rem;
   }
   #personality_content {
-    height: calc(100vh - 370px);
+    min-height: calc(100vh - 456px);
     margin: 0;
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
   .container_left {
     width: 80%;
     margin: 0 auto;
     padding: 0;
   }
+
   .container_right {
     width: 80%;
     margin: 0 auto;
@@ -156,20 +145,23 @@
 
 @media only screen and (min-width: 992px) and (orientation: portrait) {
   #personality_banner_container {
-    height: 370px;
+    height: 488px;
     padding-top: var(--headerHeight_M);
   }
   #personality_banner {
-    height: 300px;
+    height: 424px;
     width: 75%;
     margin: 0 auto;
     padding: 0rem;
   }
-
+  #personality_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
   #personality_content {
+    min-height: calc(100vh - 488px);
     width: 75%;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin: 0 auto;
   }
 
@@ -179,7 +171,7 @@
 
   .container_left {
     border-right: 1px solid var(--fourthbtnHoverColor);
-    height: 80%;
+    min-height: 800px;
     width: 20%;
     padding: 0;
     margin-top: 0;
@@ -189,33 +181,29 @@
     margin: 1rem 0;
   }
   .container_right {
-    height: 80%;
+    min-height: 800px;
     width: 80%;
     padding: 0 1rem;
     margin-top: 0;
   }
   .container_right > h1 {
-    margin: 1rem 0;
+    font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
 }
 @media only screen and (min-width: 1600px) and (orientation: portrait) {
-  #personality_banner_img {
-    width: 450px;
-    height: 100%;
-  }
 }
 @media only screen and (min-width: 1900px) and (orientation: portrait) {
 }
 
 @media only screen and (min-width: 568px) and (orientation: landscape) {
   #personality_banner_container {
-    height: 100vh;
+    height: 456px;
   }
   #personality_banner {
-    height: calc(100vh - var(--headerHeight_S));
+    height: 408px;
     width: 100%;
     padding: 0 3rem;
     display: flex;
@@ -225,12 +213,12 @@
   }
 
   #personality_banner_img {
-    width: 55%;
+    width: 50%;
     height: 100%;
   }
 
   #personality_banner_desc {
-    width: 45%;
+    width: 50%;
     height: 30%;
   }
   #personality_content {
@@ -258,11 +246,11 @@
 
 @media only screen and (min-width: 992px) and (orientation: landscape) {
   #personality_banner_container {
-    height: 370px;
+    height: 488px;
     padding-top: var(--headerHeight_M);
   }
   #personality_banner {
-    height: calc(370px - var(--headerHeight_M));
+    height: 424px;
     width: 70%;
     padding: 0;
     margin: 0 auto;
@@ -272,20 +260,14 @@
     align-items: center;
   }
 
-  #personality_banner_img {
-    width: 350px;
-    height: 100%;
+  #personality_banner_desc > h1 {
+    font-size: 2.4rem;
   }
-
-  #personality_banner_desc {
-    width: 100%;
-    height: 30%;
-  }
-
   #personality_content {
+    min-height: calc(100vh - 488px);
     width: 70%;
-    margin: calc(var(--headerHeight_M)) auto;
-    padding: 0rem;
+    margin: 0 auto;
+    padding-top: 2rem;
     flex-direction: row;
   }
 
@@ -294,35 +276,31 @@
   }
 
   .container_left {
+    min-height: 600px;
     border-right: 1px solid var(--fourthmainBgColor);
     width: 20%;
     padding: 0;
     margin-top: 0;
   }
+
   .container_left > h1 {
     text-align: left;
     margin: 1rem 0;
   }
   .container_right {
+    min-height: 600px;
     width: 80%;
     padding: 0 1rem;
     margin-top: 0;
   }
   .container_right > h1 {
-    margin: 1rem 0;
+    font-size: 1.4rem;
   }
 }
 
 @media only screen and (min-width: 1200px) and (orientation: landscape) {
 }
 @media only screen and (min-width: 1600px) and (orientation: landscape) {
-  #personality_content {
-    height: calc(100vh - 370px);
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
-  #personality_banner_img {
-    width: 450px;
-    height: 100%;
-  }
+}
+@media only screen and (min-width: 1900px) and (orientation: landscape) {
 }

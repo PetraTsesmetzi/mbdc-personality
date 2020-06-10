@@ -1,8 +1,6 @@
 /* --- GENERAL --- */
-:root {
-  --vw: 100vh;
-  --vh: 100vw;
 
+:root {
   /* --- FONTCOLORS --- */
   --mainFontColor: #fff;
   --secondFontColor: #151515;
@@ -74,4 +72,15 @@
   font-family: "Roboto Condensed", "Lato", "Helvetica Neue", "Arial", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+#content_wrapper {
+  height: auto;
 }

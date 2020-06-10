@@ -62,7 +62,8 @@ export class Score {
 
     for (let personality in personalities) {
       if (personalities[personality].title === type) {
-        result.imgPath = personalities[personality].img;
+        result.imgPath_s = personalities[personality].img_s;
+        result.imgPath_l = personalities[personality].img_l;
         result.label.push({
           Name: personalities[personality].caption,
         });

@@ -1,7 +1,7 @@
 /* --- TESTBANNER --- */
 #test_banner_container {
   width: 100%;
-  height: 100vh;
+  height: 456px;
   background-color: var(--mainBgColor);
   position: relative;
   z-index: 90;
@@ -18,11 +18,11 @@
 }
 #test_banner_img {
   width: 100%;
-  height: calc(100vh - var(--headerHeight_S));
+  height: 360px;
   position: absolute;
-  top: 0px;
+  top: 48px;
+  background-image: url(./../img/banner_test_s.jpg);
   z-index: 110;
-  background-image: url(../img/banner_test.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top;
@@ -40,25 +40,24 @@
   position: relative;
   z-index: 120;
 }
+
 #test_banner_desc > h1 {
   color: var(--mainFontColor);
   font-weight: bold;
-  font-size: 2.4rem;
-  padding: 0.28rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 
 #test_banner_desc > h2 {
   color: var(--mainFontColor);
-  font-weight: bold;
-  font-size: 1.2rem;
-  padding: 0.28rem;
+  font-size: 1rem;
+  margin: 0.5em auto;
   text-align: center;
 }
 
 /* --- TESTPROGRESS --- */
 #content_container {
-  padding: 2rem 0;
+  padding-bottom: 2rem;
 }
 #test_header {
   width: 100%;
@@ -112,6 +111,7 @@ fieldset {
   border: none;
   border-bottom: 1px solid var(--fourthFontColor);
 }
+
 legend {
   color: var(--thirdFontColor);
   font-size: 1.4rem;
@@ -206,7 +206,7 @@ label input {
 }
 @media only screen and (min-width: 568px) and (orientation: portrait) {
   #content_container {
-    min-height: calc(100vh - 370px);
+    min-height: calc(100vh - 456px);
   }
   fieldset {
     width: 75%;
@@ -220,19 +220,6 @@ label input {
   #page {
     width: 85%;
     margin: 0 auto;
-  }
-
-  #test_banner_container {
-    height: 370px;
-  }
-
-  #test_banner {
-    height: 370px;
-    position: relative;
-    top: 0;
-  }
-  #test_banner_img {
-    height: 320px;
   }
 
   #progress_section {
@@ -286,6 +273,18 @@ label input {
 }
 
 @media only screen and (min-width: 992px) and (orientation: portrait) {
+  #test_banner_container {
+    height: 488px;
+  }
+  #test_banner_img {
+    height: 360px;
+    background-image: url(./../img/banner_test_l.jpg);
+    top: 64px;
+  }
+  #test_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
+
   #page {
     width: 75%;
     margin: 0 auto;
@@ -293,11 +292,11 @@ label input {
 
   #progress_section {
     margin-top: 0;
-    height: 48px;
+    height: 64px;
   }
   #test_header {
     position: relative;
-    top: -48px;
+    top: -64px;
     background-color: var(--secondBgColor);
     z-index: 130;
   }
@@ -309,16 +308,19 @@ label input {
 
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
 }
-/*
+
 @media only screen and (min-width: 1600px) and (orientation: portrait) {
-  
 }
 @media only screen and (min-width: 1900px) and (orientation: portrait) {
-  
-} */
+}
 @media only screen and (min-width: 568px) and (orientation: landscape) {
-  #content_container {
-    min-height: calc(100vh - 370px);
+  #test_banner_container {
+    height: 458px;
+  }
+  #test_banner_img {
+    height: 360px;
+    background-image: url(./../img/banner_test_l.jpg);
+    top: 48px;
   }
   fieldset {
     width: 75%;
@@ -372,22 +374,22 @@ label input {
   }
 }
 @media only screen and (min-width: 992px) and (orientation: landscape) {
+  #test_banner_container {
+    height: 488px;
+  }
+  #test_banner_img {
+    height: 360px;
+    background-image: url(./../img/banner_test_l.jpg);
+    top: 64px;
+  }
+  #test_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
   #page {
     width: 75%;
     margin: 0 auto;
   }
-  #test_banner_container {
-    height: 370px;
-  }
 
-  #test_banner {
-    height: 370px;
-    position: relative;
-    top: 0;
-  }
-  #test_banner_img {
-    height: 320px;
-  }
   #progress_section {
     margin-top: 0;
     height: 48px;
@@ -419,8 +421,8 @@ label input {
     font-size: 1.1rem;
   }
 }
-/* @media only screen and (min-width: 1600px) and (orientation: landscape) {
+
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
 }
-@media only screen and (min-width: 1900px) and (orientation: portrait) {
+@media only screen and (min-width: 1900px) and (orientation: landscape) {
 }
- */

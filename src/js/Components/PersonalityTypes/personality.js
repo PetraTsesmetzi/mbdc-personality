@@ -24,7 +24,7 @@ export class Personality extends HTMLElement {
     this.store.unsubscribe(this.subscriber);
   }
   render(type) {
-    import(`../../../img/thumbnail${type.img}`).then((image) => {
+    import(`../../../img/thumbnail${type.img_l}`).then((image) => {
       this.innerHTML = `
       <section id="personality_banner_container">
         <div id="personality_banner">

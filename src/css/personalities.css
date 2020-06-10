@@ -1,7 +1,6 @@
-/* ---Banner --- */
 #personalities_banner_container {
   width: 100%;
-  height: 100vh;
+  height: 456px;
   background-color: var(--mainBgColor);
   position: relative;
 }
@@ -18,12 +17,13 @@
 
 #personalities_banner_img {
   width: 100%;
-  height: calc(100vh - var(--headerHeight_S));
+  height: 360px;
   position: absolute;
-  top: 0;
-  background-image: url(./../img/banner_overview.jpg);
+  top: 48px;
+  background-image: url(./../img/banner_overview_s.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   opacity: 0;
   animation: fadeIn 1s ease-in-out 1s 1 forwards;
 }
@@ -50,13 +50,13 @@
 #personalities_banner_desc > h1 {
   color: var(--mainFontColor);
   font-weight: bold;
-  font-size: 2.4rem;
+  font-size: 1.8rem;
   text-align: center;
 }
 #personalities_banner_desc > h2 {
   color: var(--mainFontColor);
-  font-size: 1.2rem;
-  margin: 0.75em auto;
+  font-size: 1rem;
+  margin: 0.5em auto;
   text-align: center;
 }
 
@@ -65,7 +65,7 @@
   width: 100%;
   height: auto;
   margin: 0 auto;
-  padding: 3rem 0;
+  padding: 2rem 0;
 }
 #personalities_header {
   width: 100%;
@@ -77,7 +77,7 @@
   width: 95%;
   font-weight: bold;
   margin: 0 auto 2rem auto;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 #personalities_gallery {
@@ -142,6 +142,14 @@ personalitycard-component {
   height: 160px;
   overflow: hidden;
 }
+.img_wrapper::before {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+}
 
 .img_wrapper img {
   transition: transform 0.7s ease-in-out;
@@ -180,18 +188,8 @@ personalitycard-component {
   }
 }
 @media only screen and (min-width: 768px) and (orientation: portrait) {
-  #personalities_banner_container {
-    height: 370px;
-  }
-
-  #personalities_banner {
-    height: 370px;
-  }
-  #personalities_banner_img {
-    height: 320px;
-  }
   #personalities_content {
-    min-height: calc(100vh - 370px);
+    min-height: calc(100vh - 388px);
   }
   .personalities_card {
     height: 350px;
@@ -208,6 +206,17 @@ personalitycard-component {
   }
 }
 @media only screen and (min-width: 992px) and (orientation: portrait) {
+  #personalities_banner_container {
+    height: 488px;
+  }
+  #personalities_banner_img {
+    height: 360px;
+    background-image: url(./../img/banner_overview_l.jpg);
+    top: 64px;
+  }
+  #personalities_banner_desc h1 {
+    font-size: 2.4rem;
+  }
   #personalities_header h1 {
     width: 850px;
   }
@@ -216,22 +225,21 @@ personalitycard-component {
   }
 }
 @media only screen and (min-width: 1200px) and (orientation: portrait) {
-  #personalities_content {
-    min-height: calc(100vh - 370px);
-  }
 }
-
+@media only screen and (min-width: 1600px) and (orientation: portrait) {
+}
+@media only screen and (min-width: 1900px) and (orientation: portrait) {
+}
 @media only screen and (min-width: 568px) and (orientation: landscape) {
   #personalities_banner_container {
-    height: 100vh;
-  }
-
-  #personalities_banner {
-    height: inherit;
+    height: 456px;
   }
   #personalities_banner_img {
-    height: calc(100vh - var(--headerHeight_S));
+    height: 360px;
+    background-image: url(./../img/banner_overview_l.jpg);
+    top: 48px;
   }
+
   #galery_container {
     margin: calc(var(--headerHeight_S)) auto 0 auto;
   }
@@ -271,16 +279,16 @@ personalitycard-component {
 }
 @media only screen and (min-width: 992px) and (orientation: landscape) {
   #personalities_banner_container {
-    height: 370px;
-  }
-
-  #personalities_banner {
-    height: 370px;
+    height: 488px;
   }
   #personalities_banner_img {
-    height: 320px;
+    height: 360px;
+    background-image: url(./../img/banner_overview_l.jpg);
+    top: 64px;
   }
-
+  #personalities_banner_desc h1 {
+    font-size: 2.4rem;
+  }
   #personalities_content {
     margin: 0 auto;
   }
@@ -292,9 +300,6 @@ personalitycard-component {
   }
 }
 @media only screen and (min-width: 1200px) and (orientation: landscape) {
-  #personalities_banner_img {
-    min-height: 320px;
-  }
   #personalities_header h1 {
     width: 1120px;
   }
@@ -319,4 +324,6 @@ personalitycard-component {
   personalitycard-component {
     width: 200px;
   }
+}
+@media only screen and (min-width: 1900px) and (orientation: landscape) {
 }

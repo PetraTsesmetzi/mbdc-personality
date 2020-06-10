@@ -20,7 +20,7 @@ resultproperties-component {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: 6px solid var(--testResultColor);
+  border: 2px solid var(--testResultColor);
   border-radius: 15px;
   margin-bottom: 40px;
   position: relative;
@@ -147,7 +147,7 @@ resultproperties-component {
 
 @media only screen and (min-width: 768px) and (orientation: portrait) {
   #result_container {
-    min-height: calc(100vh - 370px);
+    min-height: calc(100vh - 456px);
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
@@ -186,7 +186,7 @@ resultproperties-component {
 }
 @media only screen and (min-width: 1600px) and (orientation: landscape) {
   #result_wrapper {
-    min-height: calc(100vh - 370px);
+    min-height: calc(100vh - 488px);
     margin: 0 auto;
     padding: 3rem 0;
   }

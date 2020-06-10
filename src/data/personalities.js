@@ -2,7 +2,8 @@ export const personalities = {
   1: {
     id: 1,
     title: "ENFJ",
-    img: "/ENFJ_Wonderwoman_1.jpg",
+    img_s: "/ENFJ_Wonderwoman_s.jpg",
+    img_l: "/ENFJ_Wonderwoman_l.jpg",
     caption: "Wonderwoman",
     description: `ENFJ are natural-born leaders, full of passion and 
     charisma. Forming around two percent of the population, they are oftentimes
@@ -42,7 +43,8 @@ export const personalities = {
     id: 2,
     title: "ENFP",
     caption: "HarleyQuinn",
-    img: "/ENFP_HarleyQuinn_1.jpg",
+    img_s: "/ENFP_HarleyQuinn_s.jpg",
+    img_l: "/ENFP_HarleyQuinn_l.jpg",
     description: `The ENFP personality is a true free spirit. They are often the life 
     of the party, but unlike types in the Explorer Role group, ENFP's are less interested 
     in the sheer excitement and pleasure of the moment than they are in enjoying the social and
@@ -68,7 +70,8 @@ export const personalities = {
     id: 3,
     title: "ENTJ",
     caption: "Aquaman",
-    img: "/ENTJ_aquaman_1.jpg",
+    img_s: "/ENTJ_aquaman_s.jpg",
+    img_l: "/ENTJ_aquaman_l.jpg",
     description: `ENTJ's are natural-born leaders. People with this personality type embody the
     gifts of charisma and confidence, and project authority in a way that draws crowds together
     behind a common goal. However, ENTJ's are also characterized by an often ruthless level of 
@@ -91,7 +94,8 @@ export const personalities = {
     id: 4,
     title: "ENTP",
     caption: "Joker",
-    img: "/ENTP_joker_1.jpg",
+    img_s: "/ENTP_joker_s.jpg",
+    img_l: "/ENTP_joker_l.jpg",
     description: `No one loves the process of mental sparring more than the ENTP personality type,
     as it gives them a chance to exercise their effortlessly quick wit, broad accumulated knowledge base,
     and capacity for connecting disparate ideas to prove their points. ENTP's are the ultimate devil’s
@@ -112,7 +116,8 @@ export const personalities = {
     id: 5,
     title: "ESFJ",
     caption: "Starfire",
-    img: "/ESFJ_starfire_1.jpg",
+    img_s: "/ESFJ_starfire_s.jpg",
+    img_l: "/ESFJ_starfire_l.jpg",
     description: `People who share the ESFJ personality type are, for lack of a better word,
     popular – which makes sense, given that it is also a very common personality type, making up
     twelve percent of the population. In high school, ESFJ's are the cheerleaders and the quarterbacks,
@@ -139,7 +144,8 @@ export const personalities = {
     id: 6,
     title: "ESTJ",
     caption: "Hawkman",
-    img: "/ESTJ_Hawkman_1.jpg",
+    img_s: "/ESTJ_Hawkman_s.jpg",
+    img_l: "/ESTJ_Hawkman_l.jpg",
     description: `ESTJ's are representatives of tradition and order, utilizing their understanding
     of what is right, wrong and socially acceptable to bring families and communities together.
     Embracing the values of honesty, dedication and dignity, people with the ESTJ personality type
@@ -170,7 +176,8 @@ export const personalities = {
     id: 7,
     title: "ESTP",
     caption: "Catwoman",
-    img: "/ESTP_catwoman_1.jpg",
+    img_s: "/ESTP_catwoman_s.jpg",
+    img_l: "/ESTP_catwoman_l.jpg",
     description: `ESTP's always have an impact on their immediate surroundings – the best way
     to spot them at a party is to look for the whirling eddy of people flitting about them as they move
     from group to group. Laughing and entertaining with a blunt and earthy humor, ESTP' personalities
@@ -201,7 +208,8 @@ export const personalities = {
     id: 8,
     title: "ESFP",
     caption: "Green Lantern",
-    img: "/ESFP_GreenLantern_1.jpg",
+    img_s: "/ESFP_GreenLantern_s.jpg",
+    img_l: "/ESFP_GreenLantern_l.jpg",
     description: `If anyone is to be found spontaneously breaking into song and dance, it is the
     ESFP personality type. ESFP's get caught up in the excitement of the moment,
     and want everyone else to feel that way, too. No other personality type is as generous with their
@@ -228,7 +236,8 @@ export const personalities = {
     id: 9,
     title: "INFP",
     caption: "Flash",
-    img: "/INFP_Flash_1.jpg",
+    img_s: "/INFP_Flash_s.jpg",
+    img_l: "/INFP_Flash_l.jpg",
     description: `INFP personalities are true idealists, always looking for the hint of good in
     even the worst of people and events, searching for ways to make things better. While they may be
     perceived as calm, reserved, or even shy, INFP's have an inner flame and passion that can truly
@@ -258,7 +267,8 @@ export const personalities = {
     id: 10,
     title: "INFJ",
     caption: "Poison Eve",
-    img: "/INFJ_PoisonEve_1.jpg",
+    img_s: "/INFJ_PoisonEve_s.jpg",
+    img_l: "/INFJ_PoisonEve_l.jpg",
     description: `The INFJ personality type is very rare, making up less than one percent of the
     population, but they nonetheless leave their mark on the world. INFJ's have an inborn sense of
     idealism and morality, but what sets them apart is that they are not idle dreamers. These
@@ -286,7 +296,8 @@ export const personalities = {
     id: 11,
     title: "INTJ",
     caption: "Batman",
-    img: "/INTJ_batman_1.jpg",
+    img_s: "/INTJ_batman_s.jpg",
+    img_l: "/INTJ_batman_l.jpg",
     description: `It can be lonely at the top. Being one of the rarest personality types and being 
     among the most capable people, INTJ's know this all too well. They make up just two percent 
     of the population, and women with this personality type are especially rare, forming only 0.8%. 
@@ -311,7 +322,8 @@ export const personalities = {
     id: 12,
     title: "INTP",
     caption: "Ridler",
-    img: "/INTP_Riddler_1.jpg",
+    img_s: "/INTP_Riddler_s.jpg",
+    img_l: "/INTP_Riddler_l.jpg",
     description: `The INTP personality type is fairly rare, making up only three percent of the 
     population, which is definitely a good thing for them, as there’s nothing they’d be more unhappy 
     about than being “common”. INTP's pride themselves on their inventiveness and creativity, 
@@ -337,7 +349,8 @@ export const personalities = {
     id: 13,
     title: "ISFJ",
     caption: "Superman",
-    img: "/ISFJ_Superman_1.jpg",
+    img_s: "/ISFJ_Superman_s.jpg",
+    img_l: "/ISFJ_Superman_l.jpg",
     description: `The ISFJ personality type is quite unique, as many of their qualities defy 
     the definition of their individual traits. Though sensitive, ISFJ's have excellent analytical abilities; 
     though reserved, they have well-developed people skills and robust social relationships; and though 
@@ -358,7 +371,8 @@ export const personalities = {
     id: 14,
     title: "ISFP",
     caption: "Zatana",
-    img: "/ISFP_Zatana_1.jpg",
+    img_s: "/ISFP_Zatana_s.jpg",
+    img_l: "/ISFP_Zatana_l.jpg",
     description: `ISFP personalities are true artists, but not necessarily in the typical sense 
     where they’re out painting happy little trees. Often enough though, they are perfectly capable 
     of this. Rather, it’s that they use aesthetics, design and even their choices and actions to 
@@ -385,7 +399,8 @@ export const personalities = {
     id: 15,
     title: "ISTJ",
     caption: "John Stewart",
-    img: "/ISTJ_John-Stewart_1.jpg",
+    img_s: "/ISTJ_John-Stewart_s.jpg",
+    img_l: "/ISTJ_John-Stewart_l.jpg",
     description: `The ISTJ personality type is thought to be the most abundant, making up around 
     13% of the population. Their defining characteristics of integrity, practical logic and tireless 
     dedication to duty make ISTJ's a vital core to many families, as well as organizations that 
@@ -416,7 +431,8 @@ export const personalities = {
     id: 16,
     title: "ISTP",
     caption: "John Constantine",
-    img: "/ISTP_JohnConstantine_1.jpg",
+    img_s: "/ISTP_JohnConstantine_s.jpg",
+    img_l: "/ISTP_JohnConstantine_l.jpg",
     description: `ISTP's love to explore with their hands and their eyes, touching and examining the 
     world around them with cool rationalism and spirited curiosity. People with this personality type 
     are natural Makers, moving from project to project, building the useful and the superfluous for 

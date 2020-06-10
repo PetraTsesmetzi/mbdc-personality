@@ -24,7 +24,7 @@ export class Testresult extends HTMLElement {
     this.store.unsubscribe(this.subscriber);
   }
   render(result) {
-    import(`../../../img/thumbnail${result.imgPath}`).then((image) => {
+    import(`../../../img/thumbnail${result.imgPath_l}`).then((image) => {
       this.innerHTML = `
     <section id="result_banner_container">
       <div id="result_banner">

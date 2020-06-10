@@ -8,7 +8,6 @@
 body.hide #navigation_container {
   transform: translate(0, -100px);
 }
-
 #navigation_content {
   position: relative;
   top: 0;
@@ -46,7 +45,7 @@ body.hide #navigation_container {
   transform: translate(0, 100vh);
 }
 list-item {
-  height: calc((100vh - var(--headerHeight_S)) / 5);
+  height: calc((100vh - var(--headerHeight_S)) / 4);
   width: 100%;
   border-top: 2px solid var(--borderColor);
 }
