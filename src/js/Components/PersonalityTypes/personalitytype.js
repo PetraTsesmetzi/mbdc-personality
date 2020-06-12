@@ -2,7 +2,9 @@ import "../../../css/personalities.css";
 import { store } from "../Common/store";
 import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
-import { personalities } from "../../../data/personalities";
+/* import { personalities } from "../../../data/personalities"; */
+import personalities from "../../../data/personalities.json";
+
 export class Personalitytypes extends HTMLElement {
   constructor() {
     super();
@@ -15,13 +17,14 @@ export class Personalitytypes extends HTMLElement {
       h2: "Explore the 16 DC Universe Characters!",
     };
     this.banner = new Banner(bannerconfig);
+    this.personalities = personalities;
   }
   connectedCallback() {
     this.render();
     let personalities_wrapper = document.getElementById("personalities_wrapper");
     personalities_wrapper.prepend(this.banner);
     let gallery_wrapper = document.getElementById("gallery_list");
-    Object.values(personalities).map((type) => {
+    Object.values(this.personalities).map((type) => {
       let card = new Personalitycard(type);
       gallery_wrapper.appendChild(card);
     });

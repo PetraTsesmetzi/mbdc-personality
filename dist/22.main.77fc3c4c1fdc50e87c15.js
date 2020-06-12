@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[22],{34:function(c,n,p){"use strict";p.r(n),n.default=p.p+"imgs/INTJ_batman_s63c64edcf6618466751dd0a2886e780c.jpg"}}]);

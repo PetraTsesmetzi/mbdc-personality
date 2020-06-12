@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[23],{35:function(d,c,p){"use strict";p.r(c),c.default=p.p+"imgs/INTP_Riddler_ld86e475d6f69c39949d1fc7a15fb2dfc.jpg"}}]);

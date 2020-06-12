@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[6],{18:function(c,e,a){"use strict";a.r(e),e.default=a.p+"imgs/ENTJ_aquaman_s656833be9ec5cd121a6bccc29eb745e0.jpg"}}]);
