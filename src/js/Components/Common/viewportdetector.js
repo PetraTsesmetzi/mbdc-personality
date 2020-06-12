@@ -12,7 +12,11 @@ export class Viewportdetector {
   static detectStartPosition() {
     let vw = window.innerWidth;
 
-    vw < 768 ? (this.start = 600) : (this.start = 0);
+    if (vw < 992) {
+      this.start = 420;
+    } else if (vw < 1200) {
+      this.start = 0;
+    }
     return this.start;
   }
 }

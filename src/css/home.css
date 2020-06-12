@@ -126,3 +126,95 @@
     margin: 2.8rem 0;
   }
 }
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+  #home_banner_desc {
+    padding: 2.5rem;
+  }
+  #home_banner_desc > h1 {
+    font-size: 1.8rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+  }
+  .button {
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (min-width: 992px) and (orientation: landscape) {
+  #home_banner_container {
+    min-height: calc(100vh - var(--headerHeight_M));
+    margin-top: var(--headerHeight_M);
+  }
+  #home_banner_img {
+    min-height: calc(100vh - var(--headerHeight_M));
+  }
+  #home_banner_desc {
+    padding: 8rem;
+  }
+  #home_banner_desc > h1 {
+    font-size: 2.4rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+  }
+  .button {
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1200px) and (orientation: landscape) {
+  #home_banner_desc {
+    padding: 8rem;
+  }
+  #home_banner_desc > h1 {
+    font-size: 3rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 1.6rem;
+    margin: 2rem 0;
+  }
+  .button {
+    border-radius: 15px;
+    padding: 10px 25px;
+    font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 1600px) and (orientation: landscape) {
+  #home_banner_desc {
+    padding: 8rem;
+  }
+  #home_banner_desc > h1 {
+    font-size: 4rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 2rem;
+    margin: 2rem 0;
+  }
+  .button {
+    border-radius: 20px;
+    padding: 15px 30px;
+    font-size: 2rem;
+  }
+}
+@media only screen and (min-width: 1900px) and (orientation: landscape) {
+  #home_banner_desc {
+    padding: 10rem;
+  }
+  #home_banner_desc > h1 {
+    font-size: 4.6rem;
+  }
+  #home_banner_desc > h2 {
+    font-size: 2.4rem;
+    margin: 2.4rem 0;
+  }
+  .button {
+    border-radius: 25px;
+    padding: 20px 35px;
+    font-size: 2.2rem;
+  }
+}

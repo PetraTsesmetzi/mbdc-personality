@@ -19,7 +19,7 @@ export class DefaultComponent extends HTMLElement {
     this.render();
     this.store.subscribe(this.render.bind(this));
     let button = document.getElementById("test_btn");
-    this.addEventListener("click", this.handleClick);
+    button.addEventListener("click", this.handleClick.bind(this));
   }
   disconnectedCallback() {
     let content = document.getElementById("content");
