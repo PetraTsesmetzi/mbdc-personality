@@ -11,7 +11,7 @@ import personalities from "../../data/personalities.json";
 let id = 0;
 let pathI = "";
 
-//sets the path(nested route) for each personalitytype dynamicaly
+//sets the path(nested routes) for each personalitytype dynamicaly
 export const setDynamicRoutes = function (id) {
   Object.values(personalities).map((personality) => {
     if (personality.id == id) {
