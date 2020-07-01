@@ -27,7 +27,11 @@ export default class Router {
       }
     };
   }
-
+  //if previousState and state is not the same
+  //search for the given path in routes object
+  //if given path contains a "_" extract the id form the path and call the setDynamicRoutes function to create the nested path
+  //deletes the content of the routerOutlet
+  //creates the new component with the given path in the routerOutlet
   render(previousState, state) {
     if (previousState.route.path != state.route.path) {
       let page = state.route.path;
