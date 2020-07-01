@@ -1,5 +1,4 @@
 import "../../../css/personalities.css";
-import { store } from "../Common/store";
 import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
 /* import { personalities } from "../../../data/personalities"; */

@@ -6,7 +6,8 @@ import { Contact } from "../Components/Contact/contact";
 import { Pagenotfound } from "../Components/pagenotfound";
 import { Personality } from "../Components/PersonalityTypes/personality";
 import { Testresult } from "../Components/Personalitytest/testresults";
-import { personalities } from "../../data/personalities";
+/* import { personalities } from "../../data/personalities"; */
+import personalities from "../../data/personalities.json";
 
 let id = 0;
 let pathI = "";

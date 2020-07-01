@@ -1,5 +1,7 @@
-import { resultContent } from "../../../data/resultContent";
-import { personalities } from "../../../data/personalities";
+/* import { resultContent } from "../../../data/resultContent"; */
+/* import { personalities } from "../../../data/personalities"; */
+import personalities from "../../../data/personalities.json";
+import resultContent from "../../../data/resultContent.json";
 
 /* 
 does the scoring after the test is done

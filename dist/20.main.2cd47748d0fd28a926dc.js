@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[20],{33:function(c,s,e){"use strict";e.r(s),s.default=e.p+"imgs/INFP_Flash_sce31feef1b385db67c3c31c2f38a3f07.jpg"}}]);

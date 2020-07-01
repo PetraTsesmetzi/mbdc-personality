@@ -1,5 +1,3 @@
-import { questions_data } from "../../../data/questions";
-import { increaseProgress } from "../../Routing/actions";
 import { store } from "../Common/store";
 /* 
 prints the questions

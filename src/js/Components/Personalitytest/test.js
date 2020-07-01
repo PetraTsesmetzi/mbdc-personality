@@ -1,7 +1,8 @@
 import { Progress } from "./progress";
 import { Page } from "./page";
 import { TestValidator } from "./testvalidator";
-import { questions_data } from "../../../data/questions";
+/* import { questions_data } from "../../../data/questions"; */
+import questions from "../../../data/questions.json";
 import { store } from "../Common/store";
 import { increaseProgress } from "../../Routing/actions";
 import { resetProgress } from "../../Routing/actions";
@@ -16,7 +17,10 @@ loops through 4 pages until the test is valid and finished
 export class Test extends HTMLElement {
   constructor() {
     super();
-    this.numberOfQuestions = questions_data.length / 4;
+    this.questions_data = questions;
+    console.log(this.questions_data);
+
+    this.numberOfQuestions = this.questions_data.length / 4;
     this.start_question = 0;
     this.end_question = this.numberOfQuestions;
     this.counter = 1;
@@ -90,7 +94,7 @@ export class Test extends HTMLElement {
   //the testresult will be loaded
 
   loadcontent(start, end) {
-    if (start < questions_data.length) {
+    if (start < this.questions_data.length) {
       this.page = new Page(start, end);
       let content_wrapper = document.getElementById("content_wrapper");
 

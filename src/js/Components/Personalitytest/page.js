@@ -1,4 +1,5 @@
-import { questions_data } from "../../../data/questions";
+/* import { questions_data } from "../../../data/questions"; */
+import questions from "../../../data/questions.json";
 import { Questions } from "./questions";
 import { Viewportdetector } from "../Common/viewportdetector";
 /* 
@@ -9,7 +10,7 @@ export class Page extends HTMLElement {
     super();
     this.start = start;
     this.end = end;
-    this.data = questions_data.slice(this.start, this.end);
+    this.data = questions.slice(this.start, this.end);
   }
   //scrolls to the next question after pressing a radio
   handleChange(e) {
