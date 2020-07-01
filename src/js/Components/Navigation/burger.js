@@ -1,5 +1,8 @@
 import "./../../../css/burger.css";
-/* sets the functionality of the burgerbutton for the nav and
+
+/*
+Burger Button-
+sets the functionality of the burgerbutton for the nav and
 resets classes if you resize your windows */
 export class BurgerBtn {
   constructor(nav) {
@@ -10,6 +13,8 @@ export class BurgerBtn {
     window.addEventListener("resize", this.resetClassNavLinks.bind(this));
   }
 
+  // toggles the burgerbutton to an close button and vice versa
+  //stops the scrolling of the whole page
   toggleMobileBtn() {
     if (window.innerWidth < 992) {
       this.burger.classList.toggle("close");
@@ -22,6 +27,8 @@ export class BurgerBtn {
       this.body[0].classList.remove("stop-scrolling");
     }
   }
+  //if the window will be resized and the window.iinerwith is greater then 992px and the navlinks contains the class show
+  // the mobile nav menu will be closed
   resetClassNavLinks() {
     if (window.innerWidth >= 992 && this.navLinks.classList.contains("show")) {
       this.navLinks.classList.remove("show");

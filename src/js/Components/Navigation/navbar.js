@@ -1,13 +1,13 @@
-/* import "./../../css/nav.css"; */
-
-/* shwows and hide the complete navbar if you scroll */
+/* 
+Navbar-
+shwows and hide the complete navbar if you scroll */
 export class Navbar {
   constructor() {
     this.lastScroll = 0;
     this.body = document.querySelector(".body");
     window.addEventListener("scroll", this.showAndHide.bind(this));
   }
-
+  //show and hides the complete navbar if you scoll
   showAndHide() {
     if (window.scrollY > this.lastScroll && window.scrollY > 100) {
       if (!this.body.classList.contains("hide")) {

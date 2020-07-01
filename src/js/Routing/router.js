@@ -1,8 +1,15 @@
-//Router.js
 import { loadRoute } from "./actions";
 import { setDynamicRoutes } from "./routes";
-
+/* 
+Router
+handles the routing between the nav links and the 
+nested routes like personalitytype or the testresult
+implements the functionality of the back and forward button of the browser
+*/
 export default class Router {
+  //sets the route and routerOutlet attributes
+  //subscribes to the store
+  // dispatched the first route if you load the page for the first time
   constructor(config) {
     this.routes = config.routes;
     this.routerOutlet = document.getElementById("content");
@@ -10,6 +17,7 @@ export default class Router {
     config.store.dispatch(loadRoute({ path: config.path }));
     this.handleBackButton(config.store);
   }
+  //handles the backbutton of the browser
   handleBackButton(store) {
     window.onpopstate = (event) => {
       let content = "";
@@ -19,32 +27,16 @@ export default class Router {
       }
     };
   }
-
-  /* render(previousState, state) {
-    console.log(state.route);
-    let includesPath = Object.keys(this.routes).includes(state.route.path);
-    if (!includesPath) state.route.path = "pagenotfound";
-    console.log("previousState.route.path: " + previousState.route.path);
-    console.log("state.route.path: " + state.route.path);
-    if (previousState.route.path != state.route.path) {
-      let page = state.route.path;
-      let back = state.route.back;
-      while (this.routerOutlet.firstChild) {
-        this.routerOutlet.removeChild(this.routerOutlet.firstChild);
-      }
-      if (!back) {
-        history.pushState({ page }, null, `/${page}`);
-      }
-      
-      this.routerOutlet.appendChild(new this.routes[state.route.path]());
-    }
-  } */
+  //if previousState and state is not the same
+  //search for the given path in routes object
+  //if given path contains a "_" extract the id form the path and call the setDynamicRoutes function to create the nested path
+  //deletes the content of the routerOutlet
+  //creates the new component with the given path in the routerOutlet
   render(previousState, state) {
     if (previousState.route.path != state.route.path) {
       let page = state.route.path;
       let back = state.route.back;
       if (page.includes("_")) setDynamicRoutes(page.slice(page.indexOf("_") + 1));
-
       let route = this.routes.find((route) => route.path === page);
       if (typeof route === "undefined") {
         page = "pagenotfound";

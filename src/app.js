@@ -1,4 +1,9 @@
-/* import NavBar from "./js/Navigation/NavBar"; */
+/* 
+app.js
+entrypoint for the app
+creates a index object
+stops animations if the device has been rotated
+*/
 
 import Index from "./js/Routing/index.js";
 import "./css/general.css";

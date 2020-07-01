@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[10],{25:function(s,c,f){"use strict";f.r(c),c.default=f.p+"imgs/ESFJ_starfire_s985f8511c66ff85dc2f49996c9d0aae3.jpg"}}]);

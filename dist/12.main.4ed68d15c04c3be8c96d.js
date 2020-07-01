@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{27:function(e,n,c){"use strict";c.r(n),n.default=c.p+"imgs/ESFP_GreenLantern_sb39afc2f5cf0e7cb79b70e0ca9d36ee0.jpg"}}]);

@@ -1,4 +1,8 @@
-//actions
+/* 
+actions-mehtodes
+if there is an action- like a route was changed- the called fuction will set the
+the new attribute
+*/
 export function loadRoute(route) {
   return {
     type: "CHANGE_ROUTE",
@@ -28,12 +32,5 @@ export function resetProgress(number) {
   return {
     type: "RESET_PROGRESS",
     number,
-  };
-}
-
-export function increaseKendal(count) {
-  return {
-    type: "INCREASE_KENDAL",
-    count,
   };
 }

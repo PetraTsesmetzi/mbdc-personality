@@ -1,8 +1,11 @@
-//NavLinks
 import "./../../../css/nav.css";
 import { ListItem } from "./listItem";
 import { BurgerBtn } from "./burger";
 
+/* 
+NavLinks
+creates all navigation links withe the routetitle of the routes-object
+*/
 export class NavLinks {
   constructor(config) {
     this.routes = config.routes;
@@ -15,6 +18,7 @@ export class NavLinks {
     this.render(nav);
   }
   render(nav) {
+    //creating listites with route-title store and a Burgerbutton
     Object.values(this.routes).map((route) => {
       if (route.flag) {
         let link = new ListItem(route.title, this.store, this.btn);

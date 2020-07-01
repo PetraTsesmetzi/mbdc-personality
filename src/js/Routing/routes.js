@@ -6,11 +6,12 @@ import { Contact } from "../Components/Contact/contact";
 import { Pagenotfound } from "../Components/pagenotfound";
 import { Personality } from "../Components/PersonalityTypes/personality";
 import { Testresult } from "../Components/Personalitytest/testresults";
-/* import { personalities } from "../../data/personalities"; */
 import personalities from "../../data/personalities.json";
 
 let id = 0;
 let pathI = "";
+
+//sets the path(nested route) for each personalitytype dynamicaly
 export const setDynamicRoutes = function (id) {
   Object.values(personalities).map((personality) => {
     if (personality.id == id) {
@@ -23,6 +24,11 @@ export const setDynamicRoutes = function (id) {
     }
   });
 };
+
+/* routes object */
+/* contains the linkname,the path and the component wich will be created
+   the links will be shown in the navbar if their flags are true
+*/
 export const routes = [
   { title: "home", path: "home", flag: true, component: DefaultComponent },
   {
