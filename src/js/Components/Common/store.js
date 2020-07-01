@@ -18,12 +18,12 @@ let subscribers = [];
 Store.prototype.subscribe = function (fn) {
   subscribers.push(fn);
 };
-//deletes the functio of the subscribers array if the objects unsubscribed to the store
+//deletes the function of the subscribers array if the objects unsubscribed to the store
 Store.prototype.unsubscribe = function (fn) {
   subscribers.splice(subscribers.indexOf(fn), 1);
 };
 
-//stes the update of the state
+//sets the update of the state
 Store.prototype.dispatch = function (action) {
   this.previousState = { ...this.state };
   this.state = {
