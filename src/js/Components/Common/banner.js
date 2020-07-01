@@ -1,4 +1,8 @@
+/* Banner
+displays the Banner
+*/
 export class Banner extends HTMLElement {
+  //sets the bannerconfig attribute
   constructor(bannerconfig) {
     super();
     this.bannerconfig = bannerconfig;
@@ -6,6 +10,7 @@ export class Banner extends HTMLElement {
   connectedCallback() {
     this.render();
   }
+  //renders the Banner depending on the bannerconfig
   render() {
     return (this.innerHTML = `
       <section id=${this.bannerconfig.containerId}>
