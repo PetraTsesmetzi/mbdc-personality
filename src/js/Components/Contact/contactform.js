@@ -2,20 +2,28 @@ import email_icon from "../../../img/email.png";
 import place_icon from "../../../img/place.png";
 import exclamation_icon from "../../../img/exclamation_circle.png";
 import { ContactFormValidator } from "./contactvalidator";
+
+/*
+ContactForm
+creates a contact-form with firstname, lastname email and comments
+shows error messages when the form is not filled out correctly 
+*/
 export class ContactForm extends HTMLElement {
   constructor() {
     super();
   }
+  //after pushing the submit button a formValidator object will be created
   handleSubmit(e) {
     e.preventDefault();
-
     const contactFormValidator = new ContactFormValidator();
   }
+  //set a click event on the submit button
   connectedCallback() {
     this.render();
     const submit_btn = document.getElementById("submit_btn");
     submit_btn.addEventListener("click", this.handleSubmit.bind(this));
   }
+  //displays the form with their elements and submit button
   render() {
     this.innerHTML = `<section id="contact_content">
       <div id="contact_wrapper">
