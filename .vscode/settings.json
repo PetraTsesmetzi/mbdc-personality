@@ -1,3 +1,5 @@
+//setting for serverpoint
+//implementing for herokudepolyment
 {
-    "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5501
 }
