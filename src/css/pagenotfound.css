@@ -1,0 +1,14 @@
+.pagenotfound {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--secondBgColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagenotfound div {
+  font-size: 5rem;
+  text-transform: uppercase;
+  color: var(--secondFontColor);
+}

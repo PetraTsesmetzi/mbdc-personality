@@ -1,3 +1,7 @@
+import "./../../css/pagenotfound.css";
+/* Pagenotfound
+displays a 404 page
+*/
 export class Pagenotfound extends HTMLElement {
   constructor() {
     super();
@@ -6,8 +10,8 @@ export class Pagenotfound extends HTMLElement {
     this.render();
   }
   render() {
-    this.innerHTML = `<div style="height:100px; background-color:darkred; color:#fff;">
-          <span>Page not found</span>
+    this.innerHTML = `<div class="pagenotfound">
+          <div>Page Not Found</div>
           </div>`;
   }
 }
