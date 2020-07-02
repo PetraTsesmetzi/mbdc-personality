@@ -167,10 +167,6 @@ label:hover {
   cursor: pointer;
 }
 
-/* label:hover input ~ .custom_radio {
-  background-color: #9b9c9b;
-}
- */
 label input:checked ~ .custom_radio {
   background-color: var(--thirdBgColor);
 }
@@ -194,7 +190,6 @@ label input {
   border-radius: 5px;
   opacity: 0;
   transition: all 1s ease-in-out;
-  /*  display: none; */
 }
 .error_message_active {
   opacity: 1;
@@ -316,13 +311,6 @@ label input {
   }
 }
 
-@media only screen and (min-width: 1200px) and (orientation: portrait) {
-}
-
-@media only screen and (min-width: 1600px) and (orientation: portrait) {
-}
-@media only screen and (min-width: 1900px) and (orientation: portrait) {
-}
 @media only screen and (min-width: 568px) and (orientation: landscape) {
   #test_banner_container {
     height: 458px;
@@ -430,9 +418,4 @@ label input {
   fieldset div p label span:last-child {
     font-size: 1.1rem;
   }
-}
-
-@media only screen and (min-width: 1600px) and (orientation: landscape) {
-}
-@media only screen and (min-width: 1900px) and (orientation: landscape) {
 }
