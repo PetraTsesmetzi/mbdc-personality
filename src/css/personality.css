@@ -1,4 +1,3 @@
-/* ---PERSONALITYBANNER --- */
 #personality_banner_container {
   width: 100%;
   height: 456px;
@@ -41,7 +40,7 @@
   color: var(--mainFontColor);
   font-size: 1.2rem;
 }
-/* --- PERSNALITYTEXT/DESCRIPTION --- */
+
 #personality_content {
   width: 100%;
   margin: var(--headerHeight_S) auto;
@@ -191,13 +190,6 @@
   }
 }
 
-@media only screen and (min-width: 1200px) and (orientation: portrait) {
-}
-@media only screen and (min-width: 1600px) and (orientation: portrait) {
-}
-@media only screen and (min-width: 1900px) and (orientation: portrait) {
-}
-
 @media only screen and (min-width: 568px) and (orientation: landscape) {
   #personality_banner_container {
     height: 456px;
@@ -296,11 +288,4 @@
   .container_right > h1 {
     font-size: 1.4rem;
   }
-}
-
-@media only screen and (min-width: 1200px) and (orientation: landscape) {
-}
-@media only screen and (min-width: 1600px) and (orientation: landscape) {
-}
-@media only screen and (min-width: 1900px) and (orientation: landscape) {
 }
