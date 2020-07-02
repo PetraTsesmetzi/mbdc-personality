@@ -4,7 +4,7 @@ import { NavLinks } from "../Components/Navigation/navlinks";
 import { store } from "../Components/Common/store";
 import { Navbar } from "../Components/Navigation/navbar";
 
-/* 
+/*
 Index
 intialise the Navlinks, Router and Navbar
 */
