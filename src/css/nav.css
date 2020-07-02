@@ -78,3 +78,42 @@ list-item {
   height: 100%;
   overflow: hidden;
 }
+@media only screen and (min-width: 992px) {
+  #navigation_content {
+    height: var(--headerHeight_M);
+    justify-content: space-between;
+  }
+
+  #nav_links {
+    width: 600px;
+    height: var(--headerHeight_M);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: relative;
+    top: 0;
+    transition: none;
+    z-index: 1100;
+    margin-right: 2rem;
+  }
+  list-item {
+    height: inherit;
+    width: auto;
+    border-top: none;
+  }
+  #nav_links li {
+    height: 100%;
+    width: auto;
+    border: none;
+    padding: 0 1rem;
+  }
+  #nav_links li:last-child {
+    margin: 0;
+  }
+  #nav_links li:hover {
+    height: 100%;
+  }
+  #nav_links a {
+    font-size: 1rem;
+  }
+}
