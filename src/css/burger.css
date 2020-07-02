@@ -21,6 +21,11 @@
 .burger.close .bottom {
   transform: rotate(45deg) translate(-6px, -5px);
 }
+@media only screen and (min-width: 992px) and (orientation: portrait) {
+  .burger {
+    display: none;
+  }
+}
 
 @media only screen and (min-width: 992px) and (orientation: landscape) {
   .burger {
