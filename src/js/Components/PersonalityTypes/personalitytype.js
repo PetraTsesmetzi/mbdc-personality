@@ -3,7 +3,10 @@ import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
 /* import { personalities } from "../../../data/personalities"; */
 import personalities from "../../../data/personalities.json";
-
+/* 
+Personalitytypes
+contains a banner and the presonality cards
+*/
 export class Personalitytypes extends HTMLElement {
   constructor() {
     super();
@@ -28,6 +31,7 @@ export class Personalitytypes extends HTMLElement {
       gallery_wrapper.appendChild(card);
     });
   }
+  // displays a banner and the presonality cards
   render() {
     this.innerHTML = `
     <section id="personalities_wrapper">
