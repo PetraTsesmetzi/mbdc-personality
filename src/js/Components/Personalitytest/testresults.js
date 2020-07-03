@@ -31,7 +31,7 @@ export class Testresult extends HTMLElement {
   disconnectedCallback() {
     this.store.unsubscribe(this.subscriber);
   }
-  //displays the banner and the testresult
+  //displays the banner and created a Resultproperties object.
   render(result) {
     import(`../../../img/thumbnail${result.imgPath_l}`).then((image) => {
       this.innerHTML = `

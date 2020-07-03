@@ -1,14 +1,21 @@
 import "../../../css/resultproperties.css";
+
+/* 
+Resultproperties
+shows the Resultproperties
+*/
 export class Resultproperties extends HTMLElement {
   constructor(result) {
     super();
     this.result = result;
   }
+  //toggles the little gray button for mor information
   handleClick(event) {
     let desc = event.target.nextElementSibling;
     desc.classList.toggle("show");
   }
-
+  //called the rendermethod
+  //and add eventlister to the little gray buttons
   connectedCallback() {
     this.render(this.result);
     let desc_buttons = document.getElementsByClassName("desc_button");
@@ -17,6 +24,7 @@ export class Resultproperties extends HTMLElement {
       desc_btn.addEventListener("click", this.handleClick.bind(this));
     });
   }
+  //displays the resultproperties
   render(result) {
     for (let i = 0; i < result.body.length; i++) {
       let percentage_active_1 = "";
