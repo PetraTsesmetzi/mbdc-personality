@@ -1,7 +1,14 @@
 import "../../../css/personality.css";
 import { store } from "../Common/store";
 
+/* 
+Personality
+displays the personalities after clicking on a card 
+*/
+
 export class Personality extends HTMLElement {
+  //gets the personalty-object from localstorage-but only if you leave the app
+  //subscribes to the store
   constructor() {
     super();
     this.personality = JSON.parse(localStorage.getItem("personality"));
@@ -13,16 +20,19 @@ export class Personality extends HTMLElement {
   }
 
   connectedCallback() {}
-
+  //if personaltity type is not the same as the previous personality type it will call the render function
   load() {
     if (this.store.previousState.personality.type != this.store.state.personality.type) {
       this.type = this.store.state.personality.type;
       this.render(this.type);
     }
   }
+  //unsubscribes from the store
   disconnectedCallback() {
     this.store.unsubscribe(this.subscriber);
   }
+
+  //displays the personalty site with banner and content
   render(type) {
     import(`../../../img/thumbnail${type.img_l}`).then((image) => {
       this.innerHTML = `
