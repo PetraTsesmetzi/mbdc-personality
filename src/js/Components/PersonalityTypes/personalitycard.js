@@ -1,7 +1,14 @@
 import { store } from "../Common/store";
 import { loadRoute } from "../../Routing/actions";
 import { sendType } from "../../Routing/actions";
+
+/* 
+Personalitycard
+
+displays each card of personalities
+*/
 export class Personalitycard extends HTMLElement {
+  //sets the store, type and nested route
   constructor(type) {
     super();
     this.type = type;
@@ -10,16 +17,18 @@ export class Personalitycard extends HTMLElement {
       path: `personalitytypes/personality_${this.type.id}`,
     };
   }
+
   handleClick() {
-    /* richtung card */
     localStorage.setItem("personality", JSON.stringify({ type: this.type }));
     this.store.dispatch(loadRoute({ path: this.route.path }));
     this.store.dispatch(sendType({ type: this.type }));
   }
+  //every card gets a eventlister click
   connectedCallback() {
     this.render();
     this.addEventListener("click", this.handleClick);
   }
+  //displays the cards
   render() {
     let path = this.type.img_s;
     import(`../../../img/thumbnail${path}`).then((image) => {
