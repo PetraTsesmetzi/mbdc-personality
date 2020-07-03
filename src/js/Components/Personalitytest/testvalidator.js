@@ -1,4 +1,5 @@
-/* 
+/*
+TestValidator
 check if radiobutton were pressed
 sets errormessage
 set errorcolor to the radiobuttons
@@ -8,7 +9,7 @@ export class TestValidator {
     this.checked = false;
     this.checkForm(radios, error_message, end, flag);
   }
-
+  //checks if for each question one of the 2 radios buttons was pressed
   checkForm(radios, error_message, end, flag) {
     let allchecked = [];
     let j = 0;
@@ -39,16 +40,19 @@ export class TestValidator {
       this.hideErrorMessage(error_message);
     }
   }
-
+  //sets the css class "error"
   setColorOfBtn(radio) {
     radio.nextElementSibling.classList.add("error");
   }
+  //sets the css class "error_message_active"
   showErrorMessage(error_message) {
     error_message.classList.add("error_message_active");
   }
+  //removes the css class "error_message_active"
   hideErrorMessage(error_message) {
     error_message.classList.remove("error_message_active");
   }
+  //returns true or false
   get formChecked() {
     return this.checked;
   }
