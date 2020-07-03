@@ -2,8 +2,13 @@ import "../../../css/testresult.css";
 import { store } from "../Common/store";
 import { Resultproperties } from "../Personalitytest/resultproperties";
 
-//shows the testresult
+/* 
+Testresult
+shows the testresult
+ */
 export class Testresult extends HTMLElement {
+  //subscribes to the store
+  //reads the localStorage
   constructor() {
     super();
     let testresult = JSON.parse(localStorage.getItem("testresult"));
@@ -12,17 +17,21 @@ export class Testresult extends HTMLElement {
     this.subscriber = this.load.bind(this);
     this.store.subscribe(this.subscriber);
   }
-
+  //if a resultobject exist the rendermethode will use it
   connectedCallback() {
     if (this.result) this.render(this.result);
   }
+  //gets the updated resultobject from the store
+  //and calls the render methode
   load() {
     let result = this.store.state.testresult.result;
     this.render(result);
   }
+  //unscribes to the store
   disconnectedCallback() {
     this.store.unsubscribe(this.subscriber);
   }
+  //displays the banner and the testresult
   render(result) {
     import(`../../../img/thumbnail${result.imgPath_l}`).then((image) => {
       this.innerHTML = `
@@ -47,9 +56,7 @@ export class Testresult extends HTMLElement {
       </section>
     </section>`;
       let result_content = document.getElementById("result_content");
-
       let properties = new Resultproperties(result);
-
       result_content.appendChild(properties);
     });
   }
