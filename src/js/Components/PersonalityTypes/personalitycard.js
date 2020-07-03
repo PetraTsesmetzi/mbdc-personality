@@ -17,7 +17,8 @@ export class Personalitycard extends HTMLElement {
       path: `personalitytypes/personality_${this.type.id}`,
     };
   }
-
+  //stores the type to localstorage for that case if you leave the app and going back with the backbutton of the browser
+  //dispatching the round and type to the store
   handleClick() {
     localStorage.setItem("personality", JSON.stringify({ type: this.type }));
     this.store.dispatch(loadRoute({ path: this.route.path }));

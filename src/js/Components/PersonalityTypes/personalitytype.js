@@ -21,7 +21,8 @@ export class Personalitytypes extends HTMLElement {
     this.banner = new Banner(bannerconfig);
     this.personalities = personalities;
   }
-  //reads the personalties.json object and creads for each item an Personalitycard
+  //appends the banner to the wrapper
+  //reads the personalties.json object and creates for each item an Personalitycard
   //appends all cards to the gallery_wrapper
   connectedCallback() {
     this.render();
