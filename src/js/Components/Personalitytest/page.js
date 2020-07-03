@@ -23,8 +23,8 @@ export class Page extends HTMLElement {
       if (startPosition >= endPosition) clearInterval(scrolling);
     }, 20);
   }
-  //reads the questions of the questions object
-  //and set to each input(radio) an clic eventlister
+  //reads the 5 questions of the questions object an creates a Questions object for every Question
+  //and set to each input(radio) an click eventlister
   connectedCallback() {
     this.render();
     let question = document.getElementById("page");

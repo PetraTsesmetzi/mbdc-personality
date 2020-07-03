@@ -13,7 +13,7 @@ export class Questions extends HTMLElement {
   connectedCallback() {
     this.render();
   }
-
+  //displays the Question object
   render() {
     this.innerHTML = `<fieldset>
             <legend>${this.data.question}</legend>
