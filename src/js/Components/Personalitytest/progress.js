@@ -1,6 +1,7 @@
 import { store } from "./../Common/store";
 
 /* 
+Progress
 prints the progressbar
 */
 export class Progress extends HTMLElement {
@@ -16,20 +17,17 @@ export class Progress extends HTMLElement {
   connectedCallback() {
     this.render();
   }
+  //if a question was answered the progressbar gets the update
+  //if the last question was answered the progressbar will be unsubscribed
   shouldUpdate() {
     if (this.store.previousState.progress.counter != this.store.state.progress.counter) {
       this.endPosition = this.store.state.progress.counter;
-      console.log("this.endPosition_P: " + this.endPosition);
-
-      console.log(
-        "this.store.previousState.progress.counter_P: " +
-          this.store.previousState.progress.counter
-      );
 
       let progressing = setInterval(() => {
         this.startPosition += 1;
 
         this.render();
+
         if (this.startPosition >= this.endPosition) {
           clearInterval(progressing);
           if (this.startPosition >= 100) {
@@ -40,10 +38,12 @@ export class Progress extends HTMLElement {
       }, 65);
     }
   }
-  disconnectedCallback() {}
+
+  //unscribes from store
   unscribe() {
     this.store.unsubscribe(this.subscriber);
   }
+  //displays the progressbar
   render() {
     this.innerHTML = `
     <section id="test_header">

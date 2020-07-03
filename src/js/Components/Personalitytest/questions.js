@@ -1,5 +1,6 @@
 import { store } from "../Common/store";
 /* 
+Questions
 prints the questions
 */
 export class Questions extends HTMLElement {
