@@ -33,6 +33,7 @@ export class DefaultComponent extends HTMLElement {
     let content = document.getElementById("content");
     content.classList.remove("on");
   }
+
   //displays the default/home page
   render() {
     this.innerHTML = `
