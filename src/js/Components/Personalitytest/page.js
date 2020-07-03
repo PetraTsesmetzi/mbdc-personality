@@ -6,6 +6,7 @@ import { Viewportdetector } from "../Common/viewportdetector";
 prints the page with 5 questions
 */
 export class Page extends HTMLElement {
+  //set the values for the start and en question for each page
   constructor(start, end) {
     super();
     this.start = start;
@@ -22,6 +23,8 @@ export class Page extends HTMLElement {
       if (startPosition >= endPosition) clearInterval(scrolling);
     }, 20);
   }
+  //reads the questions of the questions object
+  //and set to each input(radio) an clic eventlister
   connectedCallback() {
     this.render();
     let question = document.getElementById("page");
@@ -34,6 +37,7 @@ export class Page extends HTMLElement {
       input.addEventListener("click", this.handleChange);
     });
   }
+  //dsiplays the page
   render() {
     this.innerHTML = `<section id="page">
     </section>`;
