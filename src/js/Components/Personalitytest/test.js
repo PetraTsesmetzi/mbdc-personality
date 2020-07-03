@@ -1,7 +1,6 @@
 import { Progress } from "./progress";
 import { Page } from "./page";
 import { TestValidator } from "./testvalidator";
-/* import { questions_data } from "../../../data/questions"; */
 import questions from "../../../data/questions.json";
 import { store } from "../Common/store";
 import { increaseProgress } from "../../Routing/actions";
@@ -10,20 +9,22 @@ import { Viewportdetector } from "../Common/viewportdetector";
 import { Score } from "./score";
 import { loadRoute } from "../../Routing/actions";
 import { sendTestresult } from "../../Routing/actions";
-/* 
-contains a page(with questions) and a next button
-loops through 4 pages until the test is valid and finished
+/*
+Test
+contains a page with questions and a next button
+each page has 5 questions
+there are 4 pages
 */
 export class Test extends HTMLElement {
+  //sets the variables for start and endpoint for the questions
+  //creates the progressbar object
+  //sets a testresult arry to collect the answers
   constructor() {
     super();
     this.questions_data = questions;
-    console.log(this.questions_data);
-
     this.numberOfQuestions = this.questions_data.length / 4;
     this.start_question = 0;
     this.end_question = this.numberOfQuestions;
-    this.counter = 1;
     this.page = null;
     this.store = store;
     this.Progress = new Progress();
@@ -31,12 +32,19 @@ export class Test extends HTMLElement {
     this.Score = null;
   }
   //after pushing the next button
-  //validates the form goes to the next Page if its valide
+  //creates a TestValidator object to validate if each question was answered
+  //if the Testdorm is valide the getTestResultmethode will be called
+  //also the start and end variables will be set to their new values for the new page of questions
   handleClick() {
     let radios = document.querySelectorAll(".radios");
     let error_message = document.getElementById("error_message");
-    let TestForm = new TestValidator(radios, error_message, this.numberOfQuestions, true);
-    if (TestForm.formChecked) {
+    let TestFormValidator = new TestValidator(
+      radios,
+      error_message,
+      this.numberOfQuestions,
+      true
+    );
+    if (TestFormValidator.formChecked) {
       this.start_question += this.numberOfQuestions;
       this.end_question += this.numberOfQuestions;
       window.scrollTo(0, Viewportdetector.detectStartPosition());
@@ -45,8 +53,9 @@ export class Test extends HTMLElement {
     }
   }
   //after pressing a radio
-  // check if all 5 questions were answered
+  //checks if a questions was answered
   //increases the progress if question were answered
+  //sets datatpressed attribute of the 2 radios of a question
   handleChange(event) {
     let radios = document.querySelectorAll(".radios");
     let error_message = document.getElementById("error_message");
@@ -56,9 +65,7 @@ export class Test extends HTMLElement {
       this.numberOfQuestions,
       false
     );
-    if (TestQuestion.formChecked) {
-      /*     console.log("letzter wurde rote wurde weggedrückt"); */
-    }
+
     this.resetColorRadios(event, radios);
 
     if (event.target.getAttribute("data-pressed") != "true") {
@@ -74,6 +81,7 @@ export class Test extends HTMLElement {
   connectedCallback() {
     this.render(this.start_question, this.end_question);
   }
+  //displays the test with 5 questions with errormessage
   render(start, end) {
     this.innerHTML = `
     <section id="content_container"> 
@@ -91,7 +99,7 @@ export class Test extends HTMLElement {
   }
   //loads the content,create a page and a progress
   //after the last question was answered and the next button was pressed
-  //the testresult will be loaded
+  //the next page with questions or a score object will be crated and the testresult site will be loaded
 
   loadcontent(start, end) {
     if (start < this.questions_data.length) {
@@ -126,7 +134,7 @@ export class Test extends HTMLElement {
       });
     }
   }
-  // resets the errorcolor of radios when unanswered question was answered
+  // resets the error-color of radios when unanswered question was answered
   resetColorRadios(event, radios) {
     let target;
     if (event.target.getAttribute("class") == "custom_radio") {

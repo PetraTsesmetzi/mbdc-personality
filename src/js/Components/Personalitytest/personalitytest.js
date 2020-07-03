@@ -1,6 +1,7 @@
 import "../../../css/personalitytest.css";
 import { Banner } from "../Common/banner";
 /* 
+Personalitytest
 contains the Banner and the Test
 */
 import { Test } from "./test";
@@ -18,6 +19,7 @@ export class Personalitytest extends HTMLElement {
     this.banner = new Banner(bannerconfig);
     this.test = new Test();
   }
+  //appends the banner and the test to the wrapper
   connectedCallback() {
     this.render();
     let test_wrapper = document.getElementById("personalitiestest_wrapper");
@@ -25,6 +27,7 @@ export class Personalitytest extends HTMLElement {
     test_wrapper.append(this.test);
   }
 
+  //dsiplays the banner and the test
   render() {
     this.innerHTML = `<section id="personalitiestest_wrapper"> </section>`;
   }
