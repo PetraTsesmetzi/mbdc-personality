@@ -20,6 +20,7 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({}),
       new HtmlWebpackPlugin({
         template: "./src/index.html",
+        favicon: "./src/img/mb.ico",
         minify: {
           collapseWhitespace: true,
           removeComments: true,
