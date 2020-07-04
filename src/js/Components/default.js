@@ -1,6 +1,5 @@
 import "./../../css/home.css";
 import { store } from "./Common/store";
-import image from "../../img/banner_index.png";
 import { loadRoute } from "../Routing/actions";
 /* 
 DefaultComponent

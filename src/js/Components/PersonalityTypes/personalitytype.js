@@ -1,7 +1,6 @@
 import "../../../css/personalities.css";
 import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
-/* import { personalities } from "../../../data/personalities"; */
 import personalities from "../../../data/personalities.json";
 /* 
 Personalitytypes
