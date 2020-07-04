@@ -1,44 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.00"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>DC Superheros Personality</title>
-    <link rel="icon" sizes="16x16" href="imgs/mb.ico" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bangers&display=swap"
-      rel="stylesheet"
-    />
-    <base href="/" />
-  </head>
+import "./../../css/footer.css";
 
-  <body class="body">
-    <!-- NAVIGATION -->
-    <nav id="navigation_container">
-      <div id="navigation_content">
-        <div id="logo">
-          Myers Briggs
-        </div>
-
-        <div class="burger">
-          <div class="line top"></div>
-          <div class="line middle"></div>
-          <div class="line bottom"></div>
-        </div>
-      </div>
-    </nav>
-
-    <main id="content" class="content_wrapper"></main>
-
-    <!--  <footer class="footer_container">
+export class Footer extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    render();
+  }
+  render() {
+    this.innerHTML = ` <footer class="footer_container">
       <div class="footer_wrapper">
         <div class="copyright">
           ©2019 @Petra Tsesmetzi
@@ -98,6 +68,8 @@
           </p>
         </div>
       </div>
-    </footer> -->
-  </body>
-</html>
+    </footer>`;
+  }
+}
+
+customElements.define("footer-component", Footer);

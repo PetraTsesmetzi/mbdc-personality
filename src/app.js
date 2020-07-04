@@ -7,7 +7,7 @@ stops animations if the device has been rotated
 
 import Index from "./js/Routing/index.js";
 import "./css/general.css";
-import "./css/footer.css";
+/* import "./css/footer.css"; */
 
 document.addEventListener("DOMContentLoaded", () => {
   // stop animation if device has been rotated

@@ -3,6 +3,7 @@ import { routes } from "./routes";
 import { NavLinks } from "../Components/Navigation/navlinks";
 import { store } from "../Components/Common/store";
 import { Navbar } from "../Components/Navigation/navbar";
+import { Footer } from "../Components/footer";
 
 /*
 Index
@@ -24,5 +25,6 @@ export default class Index {
     new NavLinks(config);
     new Router(config);
     new Navbar();
+    new Footer();
   }
 }
