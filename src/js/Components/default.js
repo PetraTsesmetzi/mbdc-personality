@@ -1,7 +1,10 @@
 import "./../../css/home.css";
 import { store } from "./Common/store";
 import { loadRoute } from "../Routing/actions";
-
+/* 
+DefaultComponent
+the first site if you load the app, also the home site
+*/
 export class DefaultComponent extends HTMLElement {
   //implements the stor and the path for the button
   constructor() {
