@@ -2,7 +2,10 @@ import "../../../css/personalities.css";
 import { Personalitycard } from "./personalitycard";
 import { Banner } from "../Common/banner";
 import personalities from "../../../data/personalities.json";
-
+/*
+Personalitytypes
+contains a banner and the presonality cards
+*/
 export class Personalitytypes extends HTMLElement {
   constructor() {
     super();
