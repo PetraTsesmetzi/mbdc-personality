@@ -1,5 +1,8 @@
 import "./../../css/footer.css";
-
+/* 
+FooterComponent
+creates the footer
+*/
 export class FooterComponent extends HTMLElement {
   constructor() {
     super();
@@ -7,6 +10,7 @@ export class FooterComponent extends HTMLElement {
   connectedCallback() {
     this.render();
   }
+  //displays the footer
   render() {
     this.innerHTML = ` 
       <div class="footer_wrapper">
