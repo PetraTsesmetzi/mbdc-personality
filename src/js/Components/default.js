@@ -38,7 +38,7 @@ export class DefaultComponent extends HTMLElement {
     this.innerHTML = `
    
     <section id="home_banner_container">
-     
+      <div id="home_banner_img"> 
         <div id="home_banner_desc">
           <h1>WHO AM I?</h1>
           <h2>
@@ -49,7 +49,7 @@ export class DefaultComponent extends HTMLElement {
           </h2>
           <button id="test_btn" class="button">Take the Test</button>
         </div>
-     
+     </div>
     </section>`;
   }
 }

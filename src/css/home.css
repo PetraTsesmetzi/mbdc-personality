@@ -5,15 +5,26 @@
 #home_banner_container {
   width: 100%;
   min-height: calc(100vh - var(--headerHeight_S));
-  margin-top: var(--headerHeight_S);
+  padding-top: var(--headerHeight_S);
   background-color: var(--mainBgColor);
+  position: relative;
+}
+
+#home_banner_img {
+  width: 100%;
+  min-height: calc(100vh - var(--headerHeight_S));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url(../img/banner_home.jpg);
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  z-index: 1;
 }
-#home_banner_container::after {
+#home_banner_img::after {
   content: "";
   display: block;
   position: absolute;
@@ -23,21 +34,11 @@
   height: 100%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.35);
-  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-/* #home_banner_img {
-  width: 100%;
-  min-height: calc(100vh - var(--headerHeight_S));
-  background-color: rgba(0, 0, 0, 0.35);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} */
 
 #home_banner_desc {
   color: var(--mainFontColor);
@@ -97,7 +98,7 @@
 @media only screen and (min-width: 992px) and (orientation: portrait) {
   #home_banner_container {
     min-height: calc(100vh - var(--headerHeight_M));
-    margin-top: var(--headerHeight_M);
+    padding-top: var(--headerHeight_M);
   }
   #home_banner_img {
     min-height: calc(100vh - var(--headerHeight_M));
