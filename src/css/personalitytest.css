@@ -12,8 +12,14 @@
   height: inherit;
   position: relative;
   z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 #test_banner_img {
@@ -27,17 +33,31 @@
   background-size: cover;
   background-position: top;
   opacity: 0;
+  /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
+  -webkit-animation: fadeIn 0.5s ease-in-out 0.5s 1 forwards;
   animation: fadeIn 0.5s ease-in-out 0.5s 1 forwards;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
+  }
+  100% {
+    opacity: 1;
+    /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
+  }
 }
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
   }
   100% {
     opacity: 1;
+    /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
   }
 }
-#test_banner_img::before {
+#test_banner_img:before {
   content: "";
   width: 100%;
   height: 100%;
@@ -45,6 +65,7 @@
   position: absolute;
   background-color: var(--mainBgColor);
   opacity: 0.5;
+  /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; */
 }
 #test_banner_desc {
   position: relative;
@@ -80,8 +101,14 @@
   height: 48px;
   background-color: var(--progressSectionColor);
   margin: 1.5rem auto 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -104,6 +131,7 @@
   height: 6px;
   border-radius: 0.3rem;
   background-color: var(--progressBarColor);
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 /* --- TEST --- */
@@ -131,9 +159,18 @@ legend {
 fieldset div p {
   width: 100%;
   height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
   align-items: flex-start;
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
@@ -143,9 +180,18 @@ fieldset div p label {
   width: 100%;
   color: var(--fourthFontColor);
   font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
   flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 fieldset div p label span:last-child {
@@ -189,10 +235,13 @@ label input {
   line-height: 40px;
   border-radius: 5px;
   opacity: 0;
+  /* -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; */
+  -webkit-transition: all 1s ease-in-out;
   transition: all 1s ease-in-out;
 }
 .error_message_active {
   opacity: 1;
+  /*  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)"; */
 }
 #btn_next {
   margin: 0 auto;
@@ -202,8 +251,14 @@ label input {
   border-radius: 1rem;
   background-color: var(--buttonColor);
   color: var(--mainFontColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 #btn_next:hover {
@@ -250,25 +305,52 @@ label input {
   }
   fieldset div {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0.5rem;
   }
   fieldset div p {
     width: 48%;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin: 0;
   }
   fieldset div p .label_a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   fieldset div p .label_a span:last-child {
@@ -345,25 +427,52 @@ label input {
   }
   fieldset div {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: space-evenly;
+    -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 0.5rem;
   }
   fieldset div p {
     width: 48%;
     height: 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     margin: 0;
   }
   fieldset div p .label_a {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
   }
   fieldset div p .label_a span:last-child {

@@ -61,7 +61,9 @@
   --shadowColor: rgb(235, 232, 232);
 }
 .resize_animation_stopper * {
+  -webkit-animation: none !important;
   animation: none !important;
+  -webkit-transition: none !important;
   transition: none !important;
 }
 
